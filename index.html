@@ -15,6 +15,7 @@
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
+                
                 <div>
                     <a href="#" class="nav__logo">Robin CR</a>
                 </div>
@@ -28,10 +29,14 @@
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="nav__toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>
                 </div>
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class='bx bx-moon'></i>
+                </div>
+
             </nav>
         </header>
 
@@ -42,12 +47,23 @@
                     <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Robin CR</span><br> Embedded Software Developer</h1>
 
                     <a href="#" class="button">Contact</a>
-                    <body>
-                        <div class="container">
-                            <p> You can view and download my CV using the link below.</p>
-                            <a href="assets/CV/RobinCR_Software_Developer.docx" download>Download My CV</a>
-                        </div>
-                    </body>
+                    <div class="cv-buttons" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+                        <a 
+                            href="assets/CV/RobinCR_Software_Developer.docx" 
+                            target="_blank"
+                            class="button button--blue"
+                        >
+                            View CV
+                        </a>
+                    
+                        <a 
+                            href="assets/CV/RobinCR_Software_Developer.docx" 
+                            download 
+                            class="button button--green"
+                        >
+                            Download CV
+                        </a>
+                    </div>
                 </div>
 
                 <div class="home__social">
@@ -150,7 +166,6 @@
                         <div class="skills__data">
                         <a href="prof_exp.html" class="skills__data" style="text-decoration: none; color: inherit;"></a>
                             <div class="skills__names">
-                                <i class='bx bxl-C++ skills__icon'></i>
                                 <span class="skills__name">Professional Experience</span>
                             </div>
                             <div class="skills__bar skills__html">
@@ -162,9 +177,22 @@
                         </a>
                         </div>
                         <div class="skills__data">
+                            <a href="bugs.html" class="skills__data" style="text-decoration: none; color: inherit;"></a>
+                            <div class="skills__names">
+                                <span class="skills__name">Bugs</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">100%</span>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="skills__data">
                             <a href="shortcuts.html" class="skills__data" style="text-decoration: none; color: inherit;"></a>
                             <div class="skills__names">
-                                <i class='bx bxl-embc skills__icon'></i>
+                                
                                 <span class="skills__name">Shortcuts</span>
                             </div>
                             <div class="skills__bar skills__html">
@@ -178,7 +206,7 @@
                         <div class="skills__data">
                             <a href="challenges.html" class="skills__data" style="text-decoration: none; color: inherit;"></a>
                             <div class="skills__names">
-                                <i class='bx bxl-design_patterns skills__icon' ></i>
+                                
                                 <span class="skills__name">Challenges</span>
                             </div>
                             <div class="skills__bar skills__js">
@@ -192,7 +220,6 @@
                         <div class="skills__data">
                             <a href="trainings.html" class="skills__data" style="text-decoration: none; color: inherit;"></a>
                             <div class="skills__names">
-                                <i class='bx bxl-git skills__icon'></i>
                                 <span class="skills__name">Trainings</span>
                             </div>
                             <div class="skills__bar skills__css">
@@ -275,5 +302,31 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <script>
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const icon = themeToggle.querySelector('i');
+        
+            // Load saved theme
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-theme');
+                icon.classList.replace('bx-moon', 'bx-sun');
+            }
+        
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-theme');
+        
+                // Icon change
+                if (body.classList.contains('dark-theme')) {
+                    icon.classList.replace('bx-moon', 'bx-sun');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    icon.classList.replace('bx-sun', 'bx-moon');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        </script>
+
+        
     </body>
 </html>

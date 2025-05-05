@@ -10,6 +10,16 @@ const showMenu = (toggleId, navId) =>{
     }
 }
 showMenu('nav-toggle','nav-menu')
+const themeToggle = document.getElementById('theme-toggle');
+
+themeToggle.addEventListener('click', () => {
+  // Toggle the dark theme class on the body
+  document.body.classList.toggle('dark-theme');
+  
+  // Toggle the active state of the button
+  themeToggle.classList.toggle('active');
+});
+
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')

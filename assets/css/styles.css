@@ -490,3 +490,119 @@ img {
     width: 450px;
   }
 }
+/* Enable Dark Mode Background */
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+/* Buttons */
+.button--blue {
+  background-color: #1f6feb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.button--blue:hover {
+  background-color: #1158c7;
+}
+
+.button--green {
+  background-color: #238636;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.button--green:hover {
+  background-color: #196c2e;
+}
+
+/* ===== BASE COLORS ===== */
+/* Default light theme colors */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.nav, .l-header {
+  background-color: #52b4f1; /* Default light theme background */
+  color: #874b4b; /* Text color for the menu */
+}
+
+.nav__link {
+  color: #111010; /* Default color for nav links */
+}
+
+/* ===== DARK THEME ===== */
+/* Apply dark theme only to the body and other elements */
+body.dark-theme {
+  background-color: #121212;
+  color: #e6edf3;
+}
+
+body.dark-theme .nav__link,
+body.dark-theme .nav__logo {
+  color: #e6edf3; /* Ensure menu links change color in dark mode */
+}
+
+/* Dark theme for other sections (optional, as needed) */
+body.dark-theme .section-title {
+  color: #fff;
+}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle.active {
+  background-color: #333;
+}
+
+.theme-toggle.active i {
+  left: 30px;
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* Smooth transition for other elements */
+body, .nav, .l-header {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: var(--button-bg);
+}
+/* Theme Toggle Container */
+.theme-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Circle Inside the Toggle */
+.theme-toggle i {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  transition: left 0.3s ease, transform 0.3s ease;
+}
+
+/* Active Class (When Dark Mode is On) */
+.theme-toggle.active {
+  background-color: #333;
+}
+
+.theme-toggle.active i {
+  left: 30px;
+  transform: translateY(-50%) scale(1.2);
+}
+
+
+
+
