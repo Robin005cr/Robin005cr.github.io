@@ -603,6 +603,10 @@ body, .nav, .l-header {
   transform: translateY(-50%) scale(1.2);
 }
 
+.dark-theme .home__social-icon i {
+  color: #ffffff !important;
+}
+
 
 
 
