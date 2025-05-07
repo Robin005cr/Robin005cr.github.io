@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Embedded Developer – Bosch</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-900 text-gray-200 font-sans leading-relaxed">
   <div class="max-w-5xl mx-auto p-6">
-    
+    <!-- Back Button -->
+    <div class="mb-6">
+      <button onclick="history.back()"
+        class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded shadow">
+        ← Back
+      </button>
+    </div>
+
+
     <!-- Header -->
     <header class="mb-10">
       <h1 class="text-4xl font-bold text-teal-400">Embedded Developer – Bosch</h1>
@@ -18,7 +28,8 @@
     <!-- IMS Overview -->
     <section class="mb-10">
       <h2 class="text-2xl font-semibold text-white mb-2">Interior Monitoring System (IMS)</h2>
-      <p class="mb-4">IMS project was initially introduced in order to detect the activities of driver and alert the driver in case of emergency.</p>
+      <p class="mb-4">IMS project was initially introduced in order to detect the activities of driver and alert the
+        driver in case of emergency.</p>
       <ul class="list-disc ml-6 space-y-2 text-gray-300">
         <li>Detects driver drowsiness, distraction, and impairment.</li>
         <li>Utilizes camera, steering signals, or both.</li>
@@ -90,4 +101,5 @@
 
   </div>
 </body>
+
 </html>

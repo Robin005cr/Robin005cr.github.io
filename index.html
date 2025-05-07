@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="keywords" content="Robin_CR, Robin_C_R, robin_cr, robin_c_r, portfolio, robin_c_r_, srq,
+    robin_chovallur_raju, robinchovallurraju, Robin_CR_Portfolio">
+    <meta name="author" content="Robin CR">
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- =====BOX ICONS===== -->
@@ -87,7 +89,7 @@
                     <!--img src="assets/img/abhisha.jpg" alt=""-->
                 </div>
                 <div class="cv-buttons" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
-                    <a href="assets/CV/RobinCR_Software_Developer.docx" target="_blank" class="button button--blue">
+                    <a href="assets/CV/RobinCR_Software_Developer.pdf" target="_blank" class="button button--blue">
                         View CV
                     </a>
 
@@ -168,17 +170,16 @@
                     <h2 class="skills__subtitle">Profesional Skills</h2>
                     <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id
                         vero amet, alias architecto consectetur error eum eaque sit.</p>
-                    <div class="skills__data">
-                        <a href="prof_exp.html" class="skills__data" style="text-decoration: none; color: inherit;"></a>
-                        <div class="skills__names">
-                            <span class="skills__name">Professional Experience</span>
-                            <i class='bx bx-hand-pointer' id="hand-icon"></i> <!-- Hand pointer icon -->
+                    <a href="prof_exp.html" class="group relative block w-fit custom-hover-area">
+                        <div class="flex items-center gap-6 px-8 py-5 bg-teal-600 text-white font-semibold rounded-3xl shadow-lg 
+                                        border-4 border-blue-900 hover:bg-teal-700 transition duration-300 ease-in-out 
+                                        transform group-hover:-translate-y-1 group-hover:scale-105 text-lg">
+                            <span>Professional Experience</span>
+                            <i class='bx bx-hand-pointer text-2xl group-hover:animate-bounce' id="hand-icon"></i>
                         </div>
-                        <div class="skills__bar skills__html">
+                    </a>
 
-                        </div>
-                        </a>
-                    </div>
+
                     <div class="skills__data">
                         <a href="bugs.html" class="skills__data" style="text-decoration: none; color: inherit;"></a>
                         <div class="skills__names">
@@ -237,29 +238,53 @@
             <h2 class="section-title">My Projects</h2>
 
             <div class="project__container bd-grid">
-                <a href="https://github.com/Robin005cr/Smart_Trolley_System" class="project__img">
-                    <p>Smart Trolly </p>
-                    <img src="assets/img/smart_trolley.jpg" alt="">
+                <a href="https://github.com/Robin005cr/Smart_Trolley_System" class="project__card">
+                    <div class="project__text">
+                        <p>Smart Trolley</p>
+                    </div>
+                    <div class="project__image">
+                        <img src="assets/img/smart_trolley.jpg" alt="Smart Trolley Image">
+                    </div>
                 </a>
-                <a href="https://github.com/Robin005cr/Calendar-and-Clock" class="project__img">
-                    <p>Calendar and Clock</p>
+                <a href="https://github.com/Robin005cr/Calendar-and-Clock" class="project__card">
+                    <div class="project__text">
+                        <p>Calendar and Clock</p>
+                    </div>
+                    <div class="project__image">
                     <img src="assets/img/CalendarClock.jpg" alt="">
+                    </div>
                 </a>
-                <a href="https://github.com/Robin005cr/CPU-GPU_Selector" class="project__img">
-                    <p>CPU-GPU selector</p>
+                <a href="https://github.com/Robin005cr/CPU-GPU_Selector" class="project__card">
+                    <div class="project__text">
+                        <p>CPU-GPU selector</p>
+                    </div>
+                    <div class="project__image">
                     <img src="assets/img/cpugpu.jpg" alt="">
+                    </div>
                 </a>
-                <a href="https://github.com/Robin005cr/Custom_Protocol" class="project__img">
-                    <p>Custom Protocol encoder - decoder</p>
+                <a href="https://github.com/Robin005cr/Custom_Protocol" class="project__card">
+                    <div class="project__text">
+                        <p>Custom Protocol encoder - decoder</p>
+                    </div>
+                    <div class="project__image">
                     <img src="assets/img/customprotocol.jpg" alt="">
+                    </div>
                 </a>
-                <a href="https://github.com/Robin005cr/Layered-Communication" class="project__img">
-                    <p>Layered Communication</p>
+                <a href="https://github.com/Robin005cr/Layered-Communication" class="project__card">
+                    <div class="project__text">
+                        <p>Layered Communication</p>
+                    </div>
+                    <div class="project__image">
                     <img src="assets/img/Layered.jpg" alt="">
+                    </div>
                 </a>
-                <a href="https://github.com/Robin005cr/Question_Paper_Set_Creator" class="project__img">
-                    <p>Question Paper Set creator</p>
+                <a href="https://github.com/Robin005cr/Question_Paper_Set_Creator" class="project__card">
+                    <div class="project__text">
+                        <p>Question Paper Set creator</p>
+                    </div>
+                    <div class="project__image">
                     <img src="assets/img/questionPaper.jpg" alt="">
+                    </div>
                 </a>
             </div>
         </section>
@@ -269,18 +294,20 @@
             <h2 class="section-title">Contact</h2>
 
             <div class="contact__container bd-grid">
-                <form action="your-server-endpoint" method="POST" class="contact__form" onsubmit="return validateForm()">
+                <form action="your-server-endpoint" method="POST" class="contact__form"
+                    onsubmit="return validateForm()">
                     <input type="text" placeholder="Name" name="name" class="contact__input">
                     <input type="email" placeholder="Email" name="email" id="email" class="contact__input">
-                    <textarea name="message" placeholder="Description / Comment / Reason" cols="0" rows="10" class="contact__input"></textarea>
+                    <textarea name="message" placeholder="Description / Comment / Reason" cols="0" rows="10"
+                        class="contact__input"></textarea>
                     <button type="submit" class="contact__button button">Connect</button>
                 </form>
-                
+
                 <script>
                     function validateForm() {
                         var email = document.getElementById("email").value;
                         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Standard email validation pattern
-                
+
                         if (!emailPattern.test(email)) {
                             alert("Please enter a valid email address.");
                             return false; // Prevents form submission
@@ -288,9 +315,9 @@
                         return true;
                     }
                 </script>
-                
+
             </div>
-            
+
         </section>
     </main>
 
