@@ -2,6 +2,111 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work Experience Timeline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 40px 0;
+      max-width: 600px;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: #555;
+      top: 0;
+      bottom: 0;
+      left: 30px;
+      margin-left: -1px;
+    }
+
+    .timeline-item {
+      padding-left: 60px;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 21px;
+      top: 5px;
+      width: 18px;
+      height: 18px;
+      background-color: #04c2c9;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 5px;
+      font-size: 1.1rem;
+      color: #04c2c9;
+    }
+
+    .timeline-item span {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    @media (max-width: 600px) {
+      .timeline {
+        padding: 20px 10px;
+      }
+
+      .timeline::after {
+        left: 20px;
+      }
+
+      .timeline-item {
+        padding-left: 50px;
+      }
+
+      .timeline-item::before {
+        left: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Work Experience Timeline</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h3>Senior Software Developer, ARi, Chennai</h3>
+      <span>January 2025 – Present</span>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Embedded Software Developer, Bosch, Coimbatore</h3>
+      <span>August 2022 – December 2024</span>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Software Developer, Gadgeon Smart Systems, Kochi</h3>
+      <span>July 2021 – August 2022</span>
+    </div>
+
+  </div>
+
+</body>
+
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Embedded Developer – Bosch</title>
