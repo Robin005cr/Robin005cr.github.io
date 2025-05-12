@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>C++ Code Example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/solarized-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <style>
+    body {
+      background-color: #0f1117;
+      color: #e0e0e0;
+      font-family: 'Fira Code', monospace;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      font-weight: normal;
+    }
+
+    .code-container {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #333;
+    }
+
+    pre {
+      margin: 0;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+
+    .copy-icon {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 1rem;
+      background: #1e1e1e;
+      border: none;
+      color: #ccc;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .code-container:hover .copy-icon {
+      opacity: 1;
+    }
+
+    .copy-icon:after {
+      content: '📋';
+    }
+  </style>
+</head>
+<body>
+
+<h2>C++ Stream Flags Example</h2>
+
+<div class="code-container">
+  <button class="copy-icon" onclick="copyCode(this)"></button>
+  <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;limits&gt;
+
+using namespace std;
+
+int main()
+{
+    int number;
+
+    while (true)
+    {
+        cout &lt;&lt; "Enter an integer: ";
+        cin &gt;&gt; number;
+
+        cout &lt;&lt; "\n--- Stream State Flags ---\n";
+        cout &lt;&lt; "cin.fail(): " &lt;&lt; cin.fail() &lt;&lt; endl;
+        cout &lt;&lt; "cin.bad(): " &lt;&lt; cin.bad() &lt;&lt; endl;
+        cout &lt;&lt; "cin.eof(): " &lt;&lt; cin.eof() &lt;&lt; endl;
+        cout &lt;&lt; "cin.good(): " &lt;&lt; cin.good() &lt;&lt; endl;
+
+        if (cin.fail())
+        {
+            cin.clear(); // Clear the error flags
+            cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+            cout &lt;&lt; "\nInput was invalid. Error cleared.\n";
+        }
+    }
+
+    return 0;
+}
+  </code></pre>
+</div>
+
+<script>
+  function copyCode(button) {
+    const code = button.parentElement.querySelector("code").innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      button.textContent = "✅";
+      setTimeout(() => button.textContent = "📋", 1500);
+    });
+  }
+</script>
+
+</body>
+</html>

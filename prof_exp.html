@@ -83,7 +83,13 @@
 </head>
 
 <body>
-
+  <!-- Back Button -->
+  <div class="mb-6">
+    <button onclick="history.back()"
+      class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded shadow">
+      ← Back
+    </button>
+  </div>
   <h2>Work Experience Timeline</h2>
   <div class="timeline">
 
@@ -115,14 +121,6 @@
 
 <body class="bg-gray-900 text-gray-200 font-sans leading-relaxed">
   <div class="max-w-5xl mx-auto p-6">
-    <!-- Back Button -->
-    <div class="mb-6">
-      <button onclick="history.back()"
-        class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded shadow">
-        ← Back
-      </button>
-    </div>
-
 
     <!-- Header -->
     <header class="mb-10">
@@ -168,8 +166,8 @@
       <h2 class="text-2xl font-semibold text-white mb-4">Roles & Responsibilities</h2>
       <ul class="list-disc ml-6 space-y-2 text-gray-300">
         <li>Precondition & Error Handler</li>
-        <li>Interface and Data Management</li>
-        <li>Mathematical Computations (Head/Eye Vector Algebra)</li>
+        <li>Interface handling(Inputs,Outputs,Parameters)</li>
+        <li>Mathematical Computations (Head/Eye movements)</li>
         <li>Algorithm Development (Circadian rhythm)</li>
       </ul>
     </section>
@@ -192,11 +190,30 @@
           <h3 class="text-xl text-teal-300 mb-2">Application Layer</h3>
           <ul class="list-disc ml-6 space-y-2 text-gray-300">
             <li>QAC Warning Fixes</li>
-            <li>Build System (Jenkins, CMake)</li>
+            <li>CMake integration</li>
             <li>Unit Testing (Google Test)</li>
           </ul>
         </div>
       </div>
+    </section>
+    <!-- Header -->
+    <header class="mb-10">
+      <h1 class="text-4xl font-bold text-teal-400">Software Developer – Gadgeon Smart Systems</h1>
+      <p class="text-gray-400">July 2021 – September 2022</p>
+    </header>
+
+    <!-- IMS Overview -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-white mb-2">Gateway Programming</h2>
+      <p class="mb-4">Gateways are actuallay devices like routers or modems, which are mostly used for IOT devices purposes.
+        The data from lot of sensors are sent to cloud, their encoding, decoding, authentication etc.. all are handled by gateway.
+      </p>
+      <ul class="list-disc ml-6 space-y-2 text-gray-300">
+        <li>Gateways are mostly installed in warehouses, farm houses, malls etc..</li>
+        <li>Ware house - Interfaced GPS sensor for the movement of trucks.</li>
+        <li>Farm house - Developed the encoder-decoder for temperature and humidity sensors.</li>
+        <li>Malls - BLE senosors for sharing shop location</li>
+      </ul>
     </section>
 
     <!-- Footer -->
