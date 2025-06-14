@@ -567,99 +567,38 @@ img {
   }
 }
 
-/* Enable Dark Mode Background */
-body {
-  background-color: #0d1117;
-  color: #e6edf3;
-}
-
-/* Buttons */
-.button--blue {
-  background-color: #1f6feb;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.button--blue:hover {
-  background-color: #1158c7;
-}
-
-.button--green {
-  background-color: #238636;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.button--green:hover {
-  background-color: #196c2e;
-}
-
-/* ===== BASE COLORS ===== */
-/* Default light theme colors */
+/* ===== THEME & BASE COLORS ===== */
 body {
   background-color: #ffffff;
   color: #000000;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.nav,
-.l-header {
-  background-color: #52b4f1;
-  /* Default light theme background */
-  color: #874b4b;
-  /* Text color for the menu */
-}
-
-.nav__link {
-  color: #111010;
-  /* Default color for nav links */
-}
-
-/* ===== DARK THEME ===== */
-/* Apply dark theme only to the body and other elements */
 body.dark-theme {
   background-color: #121212;
   color: #e6edf3;
 }
 
+.nav, .l-header {
+  background-color: #52b4f1;
+  color: #874b4b;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__link {
+  color: #111010;
+}
+
 body.dark-theme .nav__link,
 body.dark-theme .nav__logo {
   color: #e6edf3;
-  /* Ensure menu links change color in dark mode */
 }
 
-/* Dark theme for other sections (optional, as needed) */
 body.dark-theme .section-title {
   color: #fff;
 }
 
-/* ===== THEME TOGGLE ===== */
-.theme-toggle.active {
-  background-color: #333;
-}
-
-.theme-toggle.active i {
-  left: 30px;
-  transform: translateY(-50%) scale(1.2);
-}
-
-/* Smooth transition for other elements */
-body,
-.nav,
-.l-header {
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.button:hover {
-  background-color: var(--button-bg);
-}
-
-/* Theme Toggle Container */
+/* Theme Toggle Styles */
 .theme-toggle {
   position: relative;
   width: 60px;
@@ -669,48 +608,47 @@ body,
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
-/* Circle Inside the Toggle */
 .theme-toggle i {
   position: absolute;
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
   font-size: 1.2rem;
-  transition: left 0.3s ease, transform 0.3s ease;
+  transition: left 0.3s, transform 0.3s;
 }
-
-/* Active Class (When Dark Mode is On) */
 .theme-toggle.active {
   background-color: #333;
 }
-
 .theme-toggle.active i {
   left: 30px;
   transform: translateY(-50%) scale(1.2);
 }
 
-.dark-theme .home__social-icon i {
-  color: #ffffff !important;
+/* Button Styles */
+.button--blue {
+  background-color: #1f6feb;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.button--blue:hover {
+  background-color: #1158c7;
+}
+.button--green {
+  background-color: #238636;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.button--green:hover {
+  background-color: #196c2e;
 }
 
-
-
-.custom-hover-area::before {
-  content: '';
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  bottom: -30px;
-  left: -30px;
-}
-
-.custom-hover-area:hover>div {
-  box-shadow: 0 12px 30px rgba(0, 64, 128, 0.3);
-  transform: translateY(-4px) scale(1.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
+/* Project Card Styles */
 .project__card {
   display: flex;
   align-items: center;
@@ -718,21 +656,33 @@ body,
   border: 1px solid #b6a4fe;
   padding: 1rem;
   gap: 1rem;
+  border-radius: 8px;
+  background: #f8faff;
+  transition: box-shadow 0.2s;
 }
-
+.project__card:hover {
+  box-shadow: 0 8px 32px rgba(31, 111, 235, 0.12);
+}
 .project__text {
-  flex: 2; /* Takes up 1 portion */
-  color: #00055a; /* adjust for dark mode if needed */
+  flex: 2;
+  color: #00055a;
   font-size: 1.1rem;
 }
-
-.project__image {
-  flex: 1.8; /* Takes up 2 portions */
+body.dark-theme .project__card {
+  background: #181c24;
+  border-color: #3a3a5a;
 }
-
+body.dark-theme .project__text {
+  color: #b6c6ff;
+}
+.project__image {
+  flex: 1.8;
+}
 .project__image img {
   max-width: 100%;
   height: auto;
   display: block;
   border-radius: 8px;
 }
+
+/* Utility: Remove duplicate/contradictory body background-color rules */

@@ -8,12 +8,9 @@
     robin_chovallur_raju, robinchovallurraju, Robin_CR_Portfolio">
     <meta name="author" content="Robin CR">
     <link rel="stylesheet" href="assets/css/styles.css">
-
-    <!-- =====BOX ICONS===== -->
+    <!-- Boxicons for icons -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-
     <title>Portfolio website complete</title>
 </head>
 
@@ -21,7 +18,6 @@
     <!--===== HEADER =====-->
     <header class="l-header">
         <nav class="nav bd-grid">
-
             <div>
                 <a href="#" class="nav__logo">Robin CR</a>
             </div>
@@ -50,61 +46,138 @@
         <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Robin CR</span><br> Embedded
-                    Software Developer</h1>
+                <h1 class="home__title">
+                    Hi,<br>
+                    I'am <span class="home__title-color">Robin CR</span><br>
+                    <span id="typewriter"></span>
+                </h1>
+                <script>
+                    // Typewriter effect for multiple titles
+                    const titles = [
+                        "Software Developer",
+                        "Embedded Developer",
+                        "ADAS Engineer",
+                        "Human",
+                        "Student"
+                    ];
+                    const typewriter = document.getElementById('typewriter');
+                    let titleIndex = 0;
+                    let charIndex = 0;
+                    let typing = true;
 
-                <a href="#" class="button">Contact</a>
+                    function typeTitle() {
+                        const currentTitle = titles[titleIndex];
+                        if (typing) {
+                            if (charIndex < currentTitle.length) {
+                                typewriter.textContent += currentTitle.charAt(charIndex);
+                                charIndex++;
+                                setTimeout(typeTitle, 70);
+                            } else {
+                                typing = false;
+                                // Pause after typing full title
+                                setTimeout(typeTitle, 1200);
+                            }
+                        } else {
+                            // Only erase if not the last title in the cycle
+                            if (titleIndex === 0) {
+                                // Erase only "Software Developer" before next
+                                if (charIndex > 0) {
+                                    typewriter.textContent = currentTitle.substring(0, charIndex - 1);
+                                    charIndex--;
+                                    setTimeout(typeTitle, 30);
+                                } else {
+                                    typing = true;
+                                    titleIndex = (titleIndex + 1) % titles.length;
+                                    setTimeout(typeTitle, 300);
+                                }
+                            } else {
+                                // For other titles, erase and move to next
+                                if (charIndex > 0) {
+                                    typewriter.textContent = currentTitle.substring(0, charIndex - 1);
+                                    charIndex--;
+                                    setTimeout(typeTitle, 30);
+                                } else {
+                                    typing = true;
+                                    titleIndex = (titleIndex + 1) % titles.length;
+                                    setTimeout(typeTitle, 300);
+                                }
+                            }
+                        }
+                    }
+
+                    // Start typing on page load
+                    window.addEventListener('DOMContentLoaded', () => {
+                        typewriter.textContent = '';
+                        typeTitle();
+                    });
+                </script>
+
+                <a href="#contact" class="button">Contact</a>
 
             </div>
 
             <div class="home__social">
-                <a href="https://www.linkedin.com/in/robin-cr/" target="_blank" class="home__social-icon"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/robin005cr/" target="_blank" class="home__social-icon"><i
-                        class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/robin-cr/" target="_blank" class="home__social-icon"
+                    title="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://github.com/robin005cr/" target="_blank" class="home__social-icon" title="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://leetcode.com/u/robinchovallurraju/" target="_blank" class="home__social-icon"
+                    title="LeetCode">
+                    <img src="assets/img/leetcode.jpg" alt="LeetCode" style="width: 24px; height: 24px;">
+                </a>
+                <a href="https://www.hackerrank.com/profile/robinchovallurr1" target="_blank" class="home__social-icon"
+                    title="HackerRank">
+                    <img src="assets/img/hackerrank.png" alt="HackerRank" style="width: 24px; height: 24px;">
+                </a>
+                <a href="https://www.codechef.com/users/robin_005_cr" target="_blank" class="home__social-icon"
+                    title="CodeChef">
+                    <img src="assets/img/codechef.jpg" alt="CodeChef" style="width: 24px; height: 24px;">
+                </a>
             </div>
 
-            <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class="home__img" style="display: flex; justify-content: flex-end;">
+                <!-- SVG blob with profile image -->
+                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0" mask-type="alpha">
                         <path
-                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                            d="M9.19 145.96C34.03 76.58 114.87 54.73 184.11 29.48C245.80 6.99 311.86 -14.95 370.74 14.14C431.21 44.03 467.95 107.51 477.19 174.31C485.90 237.23 454.93 294.38 416.51 344.95C373.74 401.25 326.07 462.80 255.44 466.19C179.42 469.84 111.55 422.14 65.16 361.81C17.48 299.81 -17.16 219.58 9.19 145.96Z" />
                     </mask>
                     <g mask="url(#mask0)">
                         <path
-                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                        <image class="home__blob-img" x="50" y="0" href="assets/img/robin.png">
+                            d="M9.19 145.96C34.03 76.58 114.87 54.73 184.11 29.48C245.80 6.99 311.86 -14.95 370.74 14.14C431.21 44.03 467.95 107.51 477.19 174.31C485.90 237.23 454.93 294.38 416.51 344.95C373.74 401.25 326.07 462.80 255.44 466.19C179.42 469.84 111.55 422.14 65.16 361.81C17.48 299.81 -17.16 219.58 9.19 145.96Z" />
+                        <image class="home__blob-img" x="50" y="0" href="assets/img/robin.png" />
                     </g>
                 </svg>
             </div>
         </section>
 
         <!--===== ABOUT =====-->
-        <section class="about section " id="about">
+        <section class="about section" id="about">
             <h2 class="section-title">About me</h2>
 
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <!--img src="assets/img/abhisha.jpg" alt=""-->
+                    <!-- Optional: Add a profile image here -->
                 </div>
                 <div class="cv-buttons" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
-                    <a href="assets/CV/RobinCR_Software_Developer.pdf" target="_blank" class="button button--blue">
-                        View CV
+                    <a href="assets/CV/RobinCR_Software_Developer.pdf" target="_blank" class="button button--blue">View
+                        CV
                     </a>
-
-                    <a href="assets/CV/RobinCR_Software_Developer.docx" download class="button button--green">
-                        Download CV
-                    </a>
+                    <a href="assets/CV/RobinCR_Software_Developer.docx" download class="button button--green">Download
+                        CV</a>
                 </div>
                 <div>
                     <h2 class="about__subtitle">I'am Robin</h2>
                     <p class="about__text">
-                        I am a software developer.I am mostly working with C,C++ and ocassionally with ruby & python.
-                        Code -> Debug -> Test, I consider all these phases equally important during the product cycle.
-                        This page is a part of my journey,
-                        where I document the challenges, projects, shortcuts, and lessons I encounter in my professional
-                        life.</p>
+                        I am a software developer, mostly working with C, C++, and occasionally with Ruby & Python.<br>
+                        Code → Debug → Test: I consider all these phases equally important during the product cycle.<br>
+                        This page is a part of my journey, where I document the challenges, projects, shortcuts, and
+                        lessons
+                        I encounter in my professional life.
+                    </p>
                 </div>
             </div>
         </section>
@@ -118,9 +191,9 @@
                 <div>
                     <h3 class="roles__subtitle">C++ Application Developer</h3>
                     <p class="roles__text">
-                        -> Design Patterns<br>
-                        -> SOLID Principles<br>
-                        -> Multi-threading
+                        • Design Patterns<br>
+                        • SOLID Principles<br>
+                        • Multi-threading
                     </p>
                 </div>
 
@@ -128,9 +201,9 @@
                 <div>
                     <h3 class="roles__subtitle">ADAS / Autonomy Engineer</h3>
                     <p class="roles__text">
-                        -> Vision-based recognition<br>
-                        -> Algorithm development<br>
-                        -> Lidar perception
+                        • Vision-based recognition<br>
+                        • Algorithm development<br>
+                        • Lidar perception
                     </p>
                 </div>
 
@@ -138,9 +211,9 @@
                 <div>
                     <h3 class="roles__subtitle">Embedded / Firmware Engineer</h3>
                     <p class="roles__text">
-                        -> Bare-metal programming<br>
-                        -> Communication Protocols (I2C, SPI, UART)<br>
-                        -> Encoder - Decoder for sensors
+                        • Bare-metal programming<br>
+                        • Communication Protocols (I2C, SPI, UART)<br>
+                        • Encoder - Decoder for sensors
                     </p>
                 </div>
             </div>
@@ -153,16 +226,16 @@
                 <div>
                     <h3 class="tools__subtitle">Debugger</h3>
                     <p class="tools__text">
-                        -> Valgrind<br>
-                        -> GDB<br>
-                        -> Trace 32
+                        • Valgrind<br>
+                        • GDB<br>
+                        • Trace 32
                     </p>
                 </div>
                 <div>
                     <h3 class="tools__subtitle">Testing Tools</h3>
                     <p class="tools__text">
-                        -> CANoe<br>
-                        -> Logic analyzers<br>
+                        • CANoe<br>
+                        • Logic analyzers
                     </p>
                 </div>
             </div>
@@ -173,122 +246,122 @@
 
             <div class="skills__container bd-grid">
                 <div>
+                    <!-- Each skill links to a relevant page with interactive effect -->
                     <div class="skills__data">
-                        <a href="prof_exp.html" class="skills__data" style="text-decoration: none; color: inherit;"></a>
-                        <div class="skills__names">
-                            <span class="skills__name">Professional Experience</span>
-                        </div>
-                        <div class="skills__bar skills__css">
-
-                        </div>
-                        </a>
-                    </div>
-
-                    <div class="skills__data">
-                        <a href="bugs.html" class="skills__data" style="text-decoration: none; color: inherit;"></a>
-                        <div class="skills__names">
-                            <span class="skills__name">Bugs</span>
-                        </div>
-                        <div class="skills__bar skills__css">
-
-                        </div>
+                        <a href="prof_exp.html" class="skills__link">
+                            <div class="skills__names">
+                                <span class="skills__name">Professional Experience</span>
+                                <i class='bx bx-link-external skills__icon'></i>
+                            </div>
+                            <div class="skills__bar skills__css"></div>
                         </a>
                     </div>
                     <div class="skills__data">
-                        <a href="shortcuts.html" class="skills__data"
-                            style="text-decoration: none; color: inherit;"></a>
-                        <div class="skills__names">
-
-                            <span class="skills__name">Shortcuts</span>
-                        </div>
-                        <div class="skills__bar skills__html">
-
-                        </div>
+                        <a href="bugs.html" class="skills__link">
+                            <div class="skills__names">
+                                <span class="skills__name">Bugs</span>
+                                <i class='bx bx-link-external skills__icon'></i>
+                            </div>
+                            <div class="skills__bar skills__css"></div>
                         </a>
                     </div>
                     <div class="skills__data">
-                        <a href="challenges.html" class="skills__data"
-                            style="text-decoration: none; color: inherit;"></a>
-                        <div class="skills__names">
-
-                            <span class="skills__name">Challenges</span>
-                        </div>
-                        <div class="skills__bar skills__js">
-
-                        </div>
+                        <a href="shortcuts.html" class="skills__link">
+                            <div class="skills__names">
+                                <span class="skills__name">Shortcuts</span>
+                                <i class='bx bx-link-external skills__icon'></i>
+                            </div>
+                            <div class="skills__bar skills__html"></div>
                         </a>
                     </div>
                     <div class="skills__data">
-                        <a href="trainings.html" class="skills__data"
-                            style="text-decoration: none; color: inherit;"></a>
-                        <div class="skills__names">
-                            <span class="skills__name">Trainings</span>
-                        </div>
-                        <div class="skills__bar skills__css">
-
-                        </div>
+                        <a href="challenges.html" class="skills__link">
+                            <div class="skills__names">
+                                <span class="skills__name">Challenges</span>
+                                <i class='bx bx-link-external skills__icon'></i>
+                            </div>
+                            <div class="skills__bar skills__js"></div>
                         </a>
                     </div>
-                </div>
-
-                <div>
-                    <img src="assets/img/project3.jpg" alt="" class="skills__img">
+                    <div class="skills__data">
+                        <a href="trainings.html" class="skills__link">
+                            <div class="skills__names">
+                                <span class="skills__name">Trainings</span>
+                                <i class='bx bx-link-external skills__icon'></i>
+                            </div>
+                            <div class="skills__bar skills__css"></div>
+                        </a>
+                    </div>
                 </div>
             </div>
+        </section>
+        <style>
+            .skills__link {
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+                border-radius: 8px;
+                padding: 0.5rem 0.8rem;
+                margin-bottom: 0.5rem;
+                position: relative;
+            }
+
+            .skills__link:hover,
+            .skills__link:focus {
+                background: #f0f4ff;
+                box-shadow: 0 2px 8px rgba(80, 120, 255, 0.08);
+                color: #2a7ae4;
+                transform: translateY(-2px) scale(1.02);
+                outline: none;
+            }
+
+            .skills__icon {
+                margin-left: 0.5rem;
+                font-size: 1.1em;
+                vertical-align: middle;
+                opacity: 0.7;
+                transition: color 0.2s;
+            }
+
+            .skills__link:hover .skills__icon,
+            .skills__link:focus .skills__icon {
+                color: #2a7ae4;
+                opacity: 1;
+            }
+        </style>
+
+        </div>
         </section>
 
         <!--===== PROJECT =====-->
         <section class="project section" id="project">
             <h2 class="section-title">My Projects</h2>
-
             <div class="project__container bd-grid">
+                <!-- Project cards with links and images -->
                 <a href="https://github.com/Robin005cr/Smart_Trolley_System" class="project__card">
-                    <div class="project__text">
-                        <p>Smart Trolley</p>
-                    </div>
-                    <div class="project__image">
-                        <img src="assets/img/smart_trolley.jpg" alt="Smart Trolley Image">
-                    </div>
+                    <div class="project__text"><p>Smart Trolley</p></div>
+                    <div class="project__image"><img src="assets/img/smart_trolley.jpg" alt="Smart Trolley Image"></div>
                 </a>
                 <a href="https://github.com/Robin005cr/Calendar-and-Clock" class="project__card">
-                    <div class="project__text">
-                        <p>Calendar and Clock</p>
-                    </div>
-                    <div class="project__image">
-                        <img src="assets/img/CalendarClock.jpg" alt="">
-                    </div>
+                    <div class="project__text"><p>Calendar and Clock</p></div>
+                    <div class="project__image"><img src="assets/img/CalendarClock.jpg" alt="Calendar and Clock"></div>
                 </a>
                 <a href="https://github.com/Robin005cr/CPU-GPU_Selector" class="project__card">
-                    <div class="project__text">
-                        <p>CPU-GPU selector</p>
-                    </div>
-                    <div class="project__image">
-                        <img src="assets/img/cpugpu.jpg" alt="">
-                    </div>
+                    <div class="project__text"><p>CPU-GPU selector</p></div>
+                    <div class="project__image"><img src="assets/img/cpugpu.jpg" alt="CPU-GPU selector"></div>
                 </a>
                 <a href="https://github.com/Robin005cr/Custom_Protocol" class="project__card">
-                    <div class="project__text">
-                        <p>Custom Protocol encoder - decoder</p>
-                    </div>
-                    <div class="project__image">
-                        <img src="assets/img/customprotocol.jpg" alt="">
-                    </div>
+                    <div class="project__text"><p>Custom Protocol encoder - decoder</p></div>
+                    <div class="project__image"><img src="assets/img/customprotocol.jpg" alt="Custom Protocol"></div>
                 </a>
                 <a href="https://github.com/Robin005cr/Layered-Communication" class="project__card">
-                    <div class="project__text">
-                        <p>Layered Communication</p>
-                    </div>
-                    <div class="project__image">
-                        <img src="assets/img/Layered.jpg" alt="">
-                    </div>
+                    <div class="project__text"><p>Layered Communication</p></div>
+                    <div class="project__image"><img src="assets/img/Layered.jpg" alt="Layered Communication"></div>
                 </a>
                 <a href="https://github.com/Robin005cr/Question_Paper_Set_Creator" class="project__card">
-                    <div class="project__text">
-                        <p>Question Paper Set creator</p>
-                    </div>
-                    <div class="project__image">
-                        <img src="assets/img/questionPaper.jpg" alt="">
-                    </div>
+                    <div class="project__text"><p>Question Paper Set creator</p></div>
+                    <div class="project__image"><img src="assets/img/questionPaper.jpg" alt="Question Paper Set creator"></div>
                 </a>
             </div>
         </section>
@@ -298,23 +371,22 @@
             <h2 class="section-title">Contact</h2>
 
             <div class="contact__container bd-grid">
-                <form action="your-server-endpoint" method="POST" class="contact__form"
-                    onsubmit="return validateForm()">
-                    <input type="text" placeholder="Name" name="name" class="contact__input">
-                    <input type="email" placeholder="Email" name="email" id="email" class="contact__input">
+                <!-- Contact form with email validation -->
+                <form action="#" method="POST" class="contact__form" onsubmit="return validateForm()">
+                    <input type="text" placeholder="Name" name="name" class="contact__input" required>
+                    <input type="email" placeholder="Email" name="email" id="email" class="contact__input" required>
                     <textarea name="message" placeholder="Description / Comment / Reason" cols="0" rows="10"
-                        class="contact__input"></textarea>
+                        class="contact__input" required></textarea>
                     <button type="submit" class="contact__button button">Connect</button>
                 </form>
-
                 <script>
+                    // Simple email validation for contact form
                     function validateForm() {
                         var email = document.getElementById("email").value;
-                        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Standard email validation pattern
-
+                        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                         if (!emailPattern.test(email)) {
                             alert("Please enter a valid email address.");
-                            return false; // Prevents form submission
+                            return false;
                         }
                         return true;
                     }
@@ -333,9 +405,8 @@
                     class='bx bxl-instagram'></i></a>
             <a href="https://www.linkedin.com/in/robin-cr/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
         </div>
-        <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+        <p class="footer__copy">&copy; Bedimcode. All rights reserved</p>
     </footer>
-
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -343,6 +414,7 @@
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
     <script>
+        // Theme toggle with localStorage persistence
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
         const icon = themeToggle.querySelector('i');
