@@ -213,15 +213,20 @@ img {
 }
 
 .home__social {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  min-width: unset;
+  margin: 1.2rem 0 0 0;
 }
 
 .home__social-icon {
   width: max-content;
-  margin-bottom: var(--mb-2);
   font-size: 1.5rem;
   color: var(--second-color);
+  transition: color 0.2s;
 }
 
 .home__social-icon:hover {
@@ -437,10 +442,10 @@ img {
   }
 
   .home__social {
-    padding-top: 0;
-    padding-bottom: 2.5rem;
-    flex-direction: row;
-    align-self: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
   }
 
   .home__social-icon {
@@ -686,3 +691,57 @@ body.dark-theme .project__text {
 }
 
 /* Utility: Remove duplicate/contradictory body background-color rules */
+
+#typewriter {
+    display: inline-block;
+    min-width: 180px;
+    width: 15ch; /* Adjust to fit the longest title */
+    min-height: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.profile-animated-border {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(
+    #0a2342 0deg 90deg,
+    #1f6feb 90deg 180deg,
+    #0a2342 180deg 270deg,
+    #1f6feb 270deg 360deg
+  );
+  padding: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.profile-animated-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 0;
+  z-index: 1;
+  background: inherit;
+  animation: rotateBorder 2.5s linear infinite;
+}
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(10,35,66,0.12);
+  position: relative;
+  z-index: 2;
+}
+@keyframes rotateBorder {
+  100% {
+    transform: rotate(360deg);
+  }
+}

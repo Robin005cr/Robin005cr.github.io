@@ -44,12 +44,12 @@
 
     <main class="l-main">
         <!--===== HOME =====-->
-        <section class="home bd-grid" id="home">
-            <div class="home__data">
+        <section class="home bd-grid" id="home" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+            <div class="home__data" style="flex: 1 1 320px; min-width: 280px;">
                 <h1 class="home__title">
                     Hi,<br>
                     I'am <span class="home__title-color">Robin CR</span><br>
-                    <span id="typewriter"></span>
+                    <span id="typewriter" style="display:inline-block; min-width: 180px; min-height: 1em;"></span>
                 </h1>
                 <script>
                     // Typewriter effect for multiple titles
@@ -71,86 +71,54 @@
                             if (charIndex < currentTitle.length) {
                                 typewriter.textContent += currentTitle.charAt(charIndex);
                                 charIndex++;
-                                setTimeout(typeTitle, 70);
+                                setTimeout(typeTitle, 100);
                             } else {
                                 typing = false;
-                                // Pause after typing full title
                                 setTimeout(typeTitle, 1200);
                             }
                         } else {
-                            // Only erase if not the last title in the cycle
-                            if (titleIndex === 0) {
-                                // Erase only "Software Developer" before next
-                                if (charIndex > 0) {
-                                    typewriter.textContent = currentTitle.substring(0, charIndex - 1);
-                                    charIndex--;
-                                    setTimeout(typeTitle, 30);
-                                } else {
-                                    typing = true;
-                                    titleIndex = (titleIndex + 1) % titles.length;
-                                    setTimeout(typeTitle, 300);
-                                }
+                            if (charIndex > 0) {
+                                typewriter.textContent = currentTitle.substring(0, charIndex - 1);
+                                charIndex--;
+                                setTimeout(typeTitle, 50);
                             } else {
-                                // For other titles, erase and move to next
-                                if (charIndex > 0) {
-                                    typewriter.textContent = currentTitle.substring(0, charIndex - 1);
-                                    charIndex--;
-                                    setTimeout(typeTitle, 30);
-                                } else {
-                                    typing = true;
-                                    titleIndex = (titleIndex + 1) % titles.length;
-                                    setTimeout(typeTitle, 300);
-                                }
+                                typing = true;
+                                titleIndex = (titleIndex + 1) % titles.length;
+                                setTimeout(typeTitle, 400);
                             }
                         }
                     }
 
                     // Start typing on page load
                     window.addEventListener('DOMContentLoaded', () => {
-                        typewriter.textContent = '';
                         typeTitle();
                     });
                 </script>
 
                 <a href="#contact" class="button">Contact</a>
-
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/robin-cr/" target="_blank" class="home__social-icon" title="LinkedIn">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/robin005cr/" target="_blank" class="home__social-icon" title="GitHub">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://leetcode.com/u/robinchovallurraju/" target="_blank" class="home__social-icon" title="LeetCode">
+                        <img src="assets/img/leetcode.jpg" alt="LeetCode" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://www.hackerrank.com/profile/robinchovallurr1" target="_blank" class="home__social-icon" title="HackerRank">
+                        <img src="assets/img/hackerrank.png" alt="HackerRank" style="width: 24px; height: 24px;">
+                    </a>
+                    <a href="https://www.codechef.com/users/robin_005_cr" target="_blank" class="home__social-icon" title="CodeChef">
+                        <img src="assets/img/codechef.jpg" alt="CodeChef" style="width: 24px; height: 24px;">
+                    </a>
+                </div>
             </div>
 
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/robin-cr/" target="_blank" class="home__social-icon"
-                    title="LinkedIn">
-                    <i class='bx bxl-linkedin'></i>
-                </a>
-                <a href="https://github.com/robin005cr/" target="_blank" class="home__social-icon" title="GitHub">
-                    <i class='bx bxl-github'></i>
-                </a>
-                <a href="https://leetcode.com/u/robinchovallurraju/" target="_blank" class="home__social-icon"
-                    title="LeetCode">
-                    <img src="assets/img/leetcode.jpg" alt="LeetCode" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://www.hackerrank.com/profile/robinchovallurr1" target="_blank" class="home__social-icon"
-                    title="HackerRank">
-                    <img src="assets/img/hackerrank.png" alt="HackerRank" style="width: 24px; height: 24px;">
-                </a>
-                <a href="https://www.codechef.com/users/robin_005_cr" target="_blank" class="home__social-icon"
-                    title="CodeChef">
-                    <img src="assets/img/codechef.jpg" alt="CodeChef" style="width: 24px; height: 24px;">
-                </a>
-            </div>
-
-            <div class="home__img" style="display: flex; justify-content: flex-end;">
-                <!-- SVG blob with profile image -->
-                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="mask0" mask-type="alpha">
-                        <path
-                            d="M9.19 145.96C34.03 76.58 114.87 54.73 184.11 29.48C245.80 6.99 311.86 -14.95 370.74 14.14C431.21 44.03 467.95 107.51 477.19 174.31C485.90 237.23 454.93 294.38 416.51 344.95C373.74 401.25 326.07 462.80 255.44 466.19C179.42 469.84 111.55 422.14 65.16 361.81C17.48 299.81 -17.16 219.58 9.19 145.96Z" />
-                    </mask>
-                    <g mask="url(#mask0)">
-                        <path
-                            d="M9.19 145.96C34.03 76.58 114.87 54.73 184.11 29.48C245.80 6.99 311.86 -14.95 370.74 14.14C431.21 44.03 467.95 107.51 477.19 174.31C485.90 237.23 454.93 294.38 416.51 344.95C373.74 401.25 326.07 462.80 255.44 466.19C179.42 469.84 111.55 422.14 65.16 361.81C17.48 299.81 -17.16 219.58 9.19 145.96Z" />
-                        <image class="home__blob-img" x="50" y="0" href="assets/img/robin.png" />
-                    </g>
-                </svg>
+            <div class="home__img" style="flex: 1 1 320px; min-width: 260px; display: flex; justify-content: flex-end; position: relative;">
+                <div class="profile-animated-border">
+                    <img src="assets/img/robin.png" alt="Robin CR" class="profile-img" />
+                </div>
             </div>
         </section>
 
@@ -164,9 +132,8 @@
                 </div>
                 <div class="cv-buttons" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
                     <a href="assets/CV/RobinCR_Software_Developer.pdf" target="_blank" class="button button--blue">View
-                        CV
-                    </a>
-                    <a href="assets/CV/RobinCR_Software_Developer.docx" download class="button button--green">Download
+                </a>
+                <a href="assets/CV/RobinCR_Software_Developer.docx" download class="button button--green">Download
                         CV</a>
                 </div>
                 <div>
@@ -382,10 +349,10 @@
                 <script>
                     // Simple email validation for contact form
                     function validateForm() {
-                        var email = document.getElementById("email").value;
-                        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                        if (!emailPattern.test(email)) {
-                            alert("Please enter a valid email address.");
+                        var email = document.getElementById('email').value;
+                        var re = /^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@\"]+\.)+[^<>()[\]\\.,;:\s@\"]{2,})$/i;
+                        if (!re.test(email)) {
+                            alert('Please enter a valid email address.');
                             return false;
                         }
                         return true;
