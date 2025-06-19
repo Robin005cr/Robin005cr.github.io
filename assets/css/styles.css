@@ -572,6 +572,48 @@ img {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .home {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    row-gap: 2rem;
+    padding: 2rem 0 2rem 0;
+  }
+  .home__data {
+    width: 100%;
+    min-width: 0;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home__img {
+    width: 180px !important;
+    min-width: 0;
+    margin: 2rem 0 0 0;
+    justify-content: center !important;
+    align-items: center !important;
+    position: static !important;
+    display: flex !important;
+  }
+  .profile-animated-border {
+    width: 150px;
+    height: 150px;
+    padding: 4px;
+  }
+  .profile-img {
+    width: 135px;
+    height: 135px;
+  }
+  .home__social {
+    margin: 1.2rem 0 0 0;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+}
+
 /* ===== THEME & BASE COLORS ===== */
 body {
   background-color: #ffffff;
@@ -694,8 +736,9 @@ body.dark-theme .project__text {
 
 #typewriter {
     display: inline-block;
-    min-width: 180px;
-    width: 15ch; /* Adjust to fit the longest title */
+    min-width: 15ch;
+    max-width: 22ch;
+    width: auto;
     min-height: 1em;
     white-space: nowrap;
     overflow: hidden;
@@ -743,5 +786,38 @@ body.dark-theme .project__text {
 @keyframes rotateBorder {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.cv-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  text-align: center;
+}
+.cv-buttons .button {
+  min-width: 120px;
+  max-width: 220px;
+  width: auto;
+  align-self: center;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+  .cv-buttons {
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    text-align: center;
+  }
+  .cv-buttons .button {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    align-self: stretch;
   }
 }

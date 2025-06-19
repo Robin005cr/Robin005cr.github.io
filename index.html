@@ -44,78 +44,37 @@
 
     <main class="l-main">
         <!--===== HOME =====-->
-        <section class="home bd-grid" id="home" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-            <div class="home__data" style="flex: 1 1 320px; min-width: 280px;">
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
                 <h1 class="home__title">
                     Hi,<br>
                     I'am <span class="home__title-color">Robin CR</span><br>
-                    <span id="typewriter" style="display:inline-block; min-width: 180px; min-height: 1em;"></span>
+                    <span id="typewriter"></span>
                 </h1>
-                <script>
-                    // Typewriter effect for multiple titles
-                    const titles = [
-                        "Software Developer",
-                        "Embedded Developer",
-                        "ADAS Engineer",
-                        "Human",
-                        "Student"
-                    ];
-                    const typewriter = document.getElementById('typewriter');
-                    let titleIndex = 0;
-                    let charIndex = 0;
-                    let typing = true;
-
-                    function typeTitle() {
-                        const currentTitle = titles[titleIndex];
-                        if (typing) {
-                            if (charIndex < currentTitle.length) {
-                                typewriter.textContent += currentTitle.charAt(charIndex);
-                                charIndex++;
-                                setTimeout(typeTitle, 100);
-                            } else {
-                                typing = false;
-                                setTimeout(typeTitle, 1200);
-                            }
-                        } else {
-                            if (charIndex > 0) {
-                                typewriter.textContent = currentTitle.substring(0, charIndex - 1);
-                                charIndex--;
-                                setTimeout(typeTitle, 50);
-                            } else {
-                                typing = true;
-                                titleIndex = (titleIndex + 1) % titles.length;
-                                setTimeout(typeTitle, 400);
-                            }
-                        }
-                    }
-
-                    // Start typing on page load
-                    window.addEventListener('DOMContentLoaded', () => {
-                        typeTitle();
-                    });
-                </script>
-
-                <a href="#contact" class="button">Contact</a>
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/robin-cr/" target="_blank" class="home__social-icon" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/robin-cr/" target="_blank" class="home__social-icon"
+                        title="LinkedIn">
                         <i class='bx bxl-linkedin'></i>
                     </a>
                     <a href="https://github.com/robin005cr/" target="_blank" class="home__social-icon" title="GitHub">
                         <i class='bx bxl-github'></i>
                     </a>
-                    <a href="https://leetcode.com/u/robinchovallurraju/" target="_blank" class="home__social-icon" title="LeetCode">
-                        <img src="assets/img/leetcode.jpg" alt="LeetCode" style="width: 24px; height: 24px;">
+                    <a href="https://leetcode.com/u/robinchovallurraju/" target="_blank" class="home__social-icon"
+                        title="LeetCode profile">
+                        <img src="assets/img/leetcode.jpg" alt="LeetCode profile" style="width: 24px; height: 24px;">
                     </a>
-                    <a href="https://www.hackerrank.com/profile/robinchovallurr1" target="_blank" class="home__social-icon" title="HackerRank">
-                        <img src="assets/img/hackerrank.png" alt="HackerRank" style="width: 24px; height: 24px;">
+                    <a href="https://www.hackerrank.com/profile/robinchovallurr1" target="_blank" class="home__social-icon"
+                        title="HackerRank profile">
+                        <img src="assets/img/hackerrank.png" alt="HackerRank profile" style="width: 24px; height: 24px;">
                     </a>
-                    <a href="https://www.codechef.com/users/robin_005_cr" target="_blank" class="home__social-icon" title="CodeChef">
-                        <img src="assets/img/codechef.jpg" alt="CodeChef" style="width: 24px; height: 24px;">
+                    <a href="https://www.codechef.com/users/robin_005_cr" target="_blank" class="home__social-icon"
+                        title="CodeChef profile">
+                        <img src="assets/img/codechef.jpg" alt="CodeChef profile" style="width: 24px; height: 24px;">
                     </a>
                 </div>
             </div>
 
-            <div class="home__img" style="flex: 1 1 320px; min-width: 260px; display: flex; justify-content: flex-end; position: relative;">
+            <div class="home__img" style="justify-content: flex-end; display: flex; width: 100%;">
                 <div class="profile-animated-border">
                     <img src="assets/img/robin.png" alt="Robin CR" class="profile-img" />
                 </div>
@@ -130,24 +89,64 @@
                 <div class="about__img">
                     <!-- Optional: Add a profile image here -->
                 </div>
-                <div class="cv-buttons" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
-                    <a href="assets/CV/RobinCR_Software_Developer.pdf" target="_blank" class="button button--blue">View
-                </a>
-                <a href="assets/CV/RobinCR_Software_Developer.docx" download class="button button--green">Download
-                        CV</a>
-                </div>
+
                 <div>
                     <h2 class="about__subtitle">I'am Robin</h2>
                     <p class="about__text">
                         I am a software developer, mostly working with C, C++, and occasionally with Ruby & Python.<br>
                         Code → Debug → Test: I consider all these phases equally important during the product cycle.<br>
-                        This page is a part of my journey, where I document the challenges, projects, shortcuts, and
-                        lessons
-                        I encounter in my professional life.
+                        This page is a part of my journey, where I document the challenges, projects, shortcuts, and lessons I encounter in my professional life.
                     </p>
+                    <div class="cv-buttons">
+                        <a href="assets/CV/RobinCR_Software_Developer.pdf" target="_blank" class="button button--blue">View CV</a>
+                        <a href="assets/CV/RobinCR_Software_Developer.docx" download class="button button--green">Download CV</a>
+                    </div>
                 </div>
             </div>
         </section>
+        <script>
+            // Typewriter effect for multiple titles
+            const titles = [
+                "Software  Developer",
+                "Embedded  Developer",
+                "ADAS  Engineer",
+                "Human",
+                "Student"
+            ];
+            const typewriter = document.getElementById('typewriter');
+            let titleIndex = 0;
+            let charIndex = 0;
+            let typing = true;
+
+            function typeTitle() {
+                const currentTitle = titles[titleIndex];
+                if (typing) {
+                    if (charIndex < currentTitle.length) {
+                        typewriter.textContent += currentTitle.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(typeTitle, 100);
+                    } else {
+                        typing = false;
+                        setTimeout(typeTitle, 1200);
+                    }
+                } else {
+                    if (charIndex > 0) {
+                        typewriter.textContent = currentTitle.substring(0, charIndex - 1);
+                        charIndex--;
+                        setTimeout(typeTitle, 50);
+                    } else {
+                        typing = true;
+                        titleIndex = (titleIndex + 1) % titles.length;
+                        setTimeout(typeTitle, 400);
+                    }
+                }
+            }
+
+            // Start typing on page load
+            window.addEventListener('DOMContentLoaded', () => {
+                typeTitle();
+            });
+        </script>
 
         <!--===== ROLES =====-->
         <section class="roles section" id="roles">
@@ -307,28 +306,41 @@
             <div class="project__container bd-grid">
                 <!-- Project cards with links and images -->
                 <a href="https://github.com/Robin005cr/Smart_Trolley_System" class="project__card">
-                    <div class="project__text"><p>Smart Trolley</p></div>
+                    <div class="project__text">
+                        <p>Smart Trolley</p>
+                    </div>
                     <div class="project__image"><img src="assets/img/smart_trolley.jpg" alt="Smart Trolley Image"></div>
                 </a>
                 <a href="https://github.com/Robin005cr/Calendar-and-Clock" class="project__card">
-                    <div class="project__text"><p>Calendar and Clock</p></div>
+                    <div class="project__text">
+                        <p>Calendar and Clock</p>
+                    </div>
                     <div class="project__image"><img src="assets/img/CalendarClock.jpg" alt="Calendar and Clock"></div>
                 </a>
                 <a href="https://github.com/Robin005cr/CPU-GPU_Selector" class="project__card">
-                    <div class="project__text"><p>CPU-GPU selector</p></div>
+                    <div class="project__text">
+                        <p>CPU-GPU selector</p>
+                    </div>
                     <div class="project__image"><img src="assets/img/cpugpu.jpg" alt="CPU-GPU selector"></div>
                 </a>
                 <a href="https://github.com/Robin005cr/Custom_Protocol" class="project__card">
-                    <div class="project__text"><p>Custom Protocol encoder - decoder</p></div>
+                    <div class="project__text">
+                        <p>Custom Protocol encoder - decoder</p>
+                    </div>
                     <div class="project__image"><img src="assets/img/customprotocol.jpg" alt="Custom Protocol"></div>
                 </a>
                 <a href="https://github.com/Robin005cr/Layered-Communication" class="project__card">
-                    <div class="project__text"><p>Layered Communication</p></div>
+                    <div class="project__text">
+                        <p>Layered Communication</p>
+                    </div>
                     <div class="project__image"><img src="assets/img/Layered.jpg" alt="Layered Communication"></div>
                 </a>
                 <a href="https://github.com/Robin005cr/Question_Paper_Set_Creator" class="project__card">
-                    <div class="project__text"><p>Question Paper Set creator</p></div>
-                    <div class="project__image"><img src="assets/img/questionPaper.jpg" alt="Question Paper Set creator"></div>
+                    <div class="project__text">
+                        <p>Question Paper Set creator</p>
+                    </div>
+                    <div class="project__image"><img src="assets/img/questionPaper.jpg"
+                            alt="Question Paper Set creator"></div>
                 </a>
             </div>
         </section>
