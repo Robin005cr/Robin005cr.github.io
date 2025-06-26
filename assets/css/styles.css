@@ -627,7 +627,7 @@ body.dark-theme {
 }
 
 .nav, .l-header {
-  background-color: #52b4f1;
+  background-color: #4e91ba;
   color: #874b4b;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -700,7 +700,7 @@ body.dark-theme .section-title {
   display: flex;
   align-items: center;
   text-decoration: none;
-  border: 1px solid #b6a4fe;
+  border: 1px solid #11024a;
   padding: 1rem;
   gap: 1rem;
   border-radius: 8px;
@@ -754,9 +754,9 @@ body.dark-theme .project__text {
   justify-content: center;
   background: conic-gradient(
     #0a2342 0deg 90deg,
-    #1f6feb 90deg 180deg,
+    #4e91ba 90deg 180deg,
     #0a2342 180deg 270deg,
-    #1f6feb 270deg 360deg
+    #4e91ba 270deg 360deg
   );
   padding: 6px;
   position: relative;
