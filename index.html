@@ -27,7 +27,7 @@
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Sections</a></li>
-                    <li class="nav__item"><a href="#project" class="nav__link">My Projects</a></li>
+                    <li class="nav__item"><a href="#project" class="nav__link">Projects</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -45,7 +45,7 @@
     <main class="l-main">
         <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
-            
+
             <div class="home__data">
                 <h1 class="home__title">
                     Hi,<br>
@@ -305,7 +305,7 @@
 
         <!--===== PROJECT =====-->
         <section class="project section" id="project">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="project__container bd-grid">
                 <!-- Project cards with links and images -->
                 <a href="https://github.com/Robin005cr/Smart_Trolley_System" class="project__card" target="_blank">
@@ -315,9 +315,17 @@
                     </span>
                     <div class="project__text">
                         <p>Smart Trolley System</p>
+                        <div class="project__tags">
+                            <span class="project__tag">C++</span>
+                            <span class="project__tag">Algorithms</span>
+                            <span class="project__tag">AI</span>
+                        </div>
+                        <div class="project__desc">
+                            <em>An intelligent shopping trolley system that uses AI and algorithms to automate item detection and checkout, improving retail efficiency.</em>
+                        </div>
                     </div>
                     <div class="project__image">
-                        <img src="assets/img/smart_trolley.jpg" alt="Smart Trolley System">
+                        <img src="assets/img/smart_trolley.jpg" alt="Smart Trolley System project screenshot">
                     </div>
                 </a>
                 <a href="https://github.com/Robin005cr/Calendar-and-Clock" class="project__card" target="_blank">
@@ -360,7 +368,8 @@
                     </div>
                     <div class="project__image"><img src="assets/img/Layered.jpg" alt="Layered Communication"></div>
                 </a>
-                <a href="https://github.com/Robin005cr/Question_Paper_Set_Creator" class="project__card" target="_blank">
+                <a href="https://github.com/Robin005cr/Question_Paper_Set_Creator" class="project__card"
+                    target="_blank">
                     <span class="github-corner-ribbon" title="View on GitHub">
                         <span class="github-ribbon-bg"></span>
                         <i class="fab fa-github"></i>
@@ -368,7 +377,8 @@
                     <div class="project__text">
                         <p>Question Paper Set creator</p>
                     </div>
-                    <div class="project__image"><img src="assets/img/questionPaper.jpg" alt="Question Paper Set creator"></div>
+                    <div class="project__image"><img src="assets/img/questionPaper.jpg"
+                            alt="Question Paper Set creator"></div>
                 </a>
             </div>
         </section>
@@ -390,7 +400,7 @@
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
                 text-decoration: none;
                 color: #333;
-                transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
                 position: relative;
                 opacity: 0;
                 transform: translateY(40px);
@@ -435,12 +445,29 @@
                 color: #ffd700;
             }
 
-            .project__card:nth-child(1) { animation-delay: 0.1s; }
-            .project__card:nth-child(2) { animation-delay: 0.2s; }
-            .project__card:nth-child(3) { animation-delay: 0.3s; }
-            .project__card:nth-child(4) { animation-delay: 0.4s; }
-            .project__card:nth-child(5) { animation-delay: 0.5s; }
-            .project__card:nth-child(6) { animation-delay: 0.6s; }
+            .project__card:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+
+            .project__card:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+
+            .project__card:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+
+            .project__card:nth-child(4) {
+                animation-delay: 0.4s;
+            }
+
+            .project__card:nth-child(5) {
+                animation-delay: 0.5s;
+            }
+
+            .project__card:nth-child(6) {
+                animation-delay: 0.6s;
+            }
 
             @keyframes projectFadeIn {
                 to {
@@ -502,7 +529,8 @@
                     height: 160px;
                 }
 
-                .github-corner-ribbon, .github-ribbon-bg {
+                .github-corner-ribbon,
+                .github-ribbon-bg {
                     width: 36px;
                     height: 36px;
                 }
@@ -511,6 +539,27 @@
                     font-size: 1.1rem;
                     margin: 6px 6px 0 0;
                 }
+            }
+
+            .project__tags {
+                margin-top: 0.5rem;
+                font-size: 0.9rem;
+                color: #ccc;
+            }
+
+            .project__tag {
+                display: inline-block;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+                padding: 0.2rem 0.5rem;
+                margin-right: 0.5rem;
+            }
+
+            .project__desc {
+                margin-top: 0.5rem;
+                font-size: 0.9rem;
+                color: #ddd;
+                font-style: italic;
             }
         </style>
 
