@@ -39,6 +39,16 @@ if (themeToggle) {
     });
 }
 
+var example = ['A', 'B', 'C', 'D'];
+
+let seqIndex = 0;
+setInterval(function() {
+    const sequenceElem = document.getElementById("sequence");
+    if (sequenceElem) {
+        sequenceElem.innerHTML = "We Do " + example[seqIndex];
+    }
+    seqIndex = (seqIndex + 1) % example.length;
+}, 3000); // Change every 3 seconds
 
 /*===== CONTACT FORM =====*/
 // Contact form: prevent default and show alert (replace with backend logic as needed)

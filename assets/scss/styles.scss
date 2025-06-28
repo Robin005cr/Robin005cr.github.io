@@ -162,6 +162,25 @@ img{
         cursor: pointer;
     }
 }
+@keyframes slide {
+  from {
+    margin-left: 0;
+    background-color: orange;
+  }
+  to {
+    margin-left: 80%;
+    background-color: orange;
+  }
+}
+
+.animated-element {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; /* Plays forward, then backward */
+  animation-timing-function: ease-in;
+}
+
 /*Active menu*/
 .active-link::after{
     position: absolute;

@@ -12,6 +12,69 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Portfolio website complete</title>
+    <style>
+        /* Animation for header nav links: fade in and slide up one after another */
+        .nav__list .nav__item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: navFadeIn 0.6s forwards;
+        }
+
+        .nav__list .nav__item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .nav__list .nav__item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .nav__list .nav__item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .nav__list .nav__item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .nav__list .nav__item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes navFadeIn {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .quotes__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px;
+            margin: 2rem 0;
+        }
+
+        .quote__text {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #2d3748;
+            background: #f7fafc;
+            border-left: 4px solid #4e91ba;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s, transform 0.7s;
+        }
+
+        .quote__text.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body>
@@ -92,11 +155,11 @@
                 </div>
                 <div>
                     <h2 class="about__subtitle">I'am Robin</h2>
-                    <p class="about__text" style="text-align: justify; margin: 0 auto; max-width: 600px;">
-                        I am a software developer, mostly working with C, C++, and occasionally with Ruby & Python. Code
-                        → Debug → Test: I consider all these phases equally important during the product cycle.
-                        This page is a part of my journey, where I document the challenges, projects, shortcuts, and
-                        lessons I encounter in my professional life.
+                    <p class="about__text" style="text-align: justify; margin: 0 auto; max-width: 600px;"></p>
+                    I am a software developer, mostly working with C, C++, and occasionally with Ruby & Python. Code
+                    → Debug → Test: I consider all these phases equally important during the product cycle.
+                    This page is a part of my journey, where I document the challenges, projects, shortcuts, and
+                    lessons I encounter in my professional life.
                     </p>
                     <div class="cv-buttons" style="margin-top: 1rem;">
                         <a href="assets/CV/RobinCR_Software_Developer.pdf" target="_blank"
@@ -321,7 +384,8 @@
                             <span class="project__tag">AI</span>
                         </div>
                         <div class="project__desc">
-                            <em>An intelligent shopping trolley system that uses AI and algorithms to automate item detection and checkout, improving retail efficiency.</em>
+                            <em>An intelligent shopping trolley system that uses AI and algorithms to automate item
+                                detection and checkout, improving retail efficiency.</em>
                         </div>
                     </div>
                     <div class="project__image">
@@ -335,6 +399,15 @@
                     </span>
                     <div class="project__text">
                         <p>Calendar and Clock</p>
+                        <div class="project__tags">
+                            <span class="project__tag">C++</span>
+                            <span class="project__tag">Algorithms</span>
+                            <span class="project__tag">AI</span>
+                        </div>
+                        <div class="project__desc">
+                            <em>An intelligent shopping trolley system that uses AI and algorithms to automate item
+                                detection and checkout, improving retail efficiency.</em>
+                        </div>
                     </div>
                     <div class="project__image"><img src="assets/img/CalendarClock.jpg" alt="Calendar and Clock"></div>
                 </a>
@@ -345,6 +418,15 @@
                     </span>
                     <div class="project__text">
                         <p>CPU-GPU selector</p>
+                        <div class="project__tags">
+                            <span class="project__tag">C++</span>
+                            <span class="project__tag">Algorithms</span>
+                            <span class="project__tag">AI</span>
+                        </div>
+                        <div class="project__desc">
+                            <em>An intelligent shopping trolley system that uses AI and algorithms to automate item
+                                detection and checkout, improving retail efficiency.</em>
+                        </div>
                     </div>
                     <div class="project__image"><img src="assets/img/cpugpu.jpg" alt="CPU-GPU selector"></div>
                 </a>
@@ -355,6 +437,15 @@
                     </span>
                     <div class="project__text">
                         <p>Custom Protocol encoder - decoder</p>
+                        <div class="project__tags">
+                            <span class="project__tag">C++</span>
+                            <span class="project__tag">Algorithms</span>
+                            <span class="project__tag">AI</span>
+                        </div>
+                        <div class="project__desc">
+                            <em>An intelligent shopping trolley system that uses AI and algorithms to automate item
+                                detection and checkout, improving retail efficiency.</em>
+                        </div>
                     </div>
                     <div class="project__image"><img src="assets/img/customprotocol.jpg" alt="Custom Protocol"></div>
                 </a>
@@ -365,6 +456,15 @@
                     </span>
                     <div class="project__text">
                         <p>Layered Communication</p>
+                        <div class="project__tags">
+                            <span class="project__tag">C++</span>
+                            <span class="project__tag">Algorithms</span>
+                            <span class="project__tag">AI</span>
+                        </div>
+                        <div class="project__desc">
+                            <em>An intelligent shopping trolley system that uses AI and algorithms to automate item
+                                detection and checkout, improving retail efficiency.</em>
+                        </div>
                     </div>
                     <div class="project__image"><img src="assets/img/Layered.jpg" alt="Layered Communication"></div>
                 </a>
@@ -376,6 +476,15 @@
                     </span>
                     <div class="project__text">
                         <p>Question Paper Set creator</p>
+                        <div class="project__tags">
+                            <span class="project__tag">C++</span>
+                            <span class="project__tag">Algorithms</span>
+                            <span class="project__tag">AI</span>
+                        </div>
+                        <div class="project__desc">
+                            <em>An intelligent shopping trolley system that uses AI and algorithms to automate item
+                                detection and checkout, improving retail efficiency.</em>
+                        </div>
                     </div>
                     <div class="project__image"><img src="assets/img/questionPaper.jpg"
                             alt="Question Paper Set creator"></div>
@@ -592,6 +701,40 @@
             </div>
 
         </section>
+
+        <!--===== QUOTES =====-->
+        <section class="quotes section" id="quotes">
+            <h2 class="section-title">Quotes</h2>
+            <div class="quotes__container">
+                <blockquote id="quoteText" class="quote__text">"Doing something is better than doing nothing."
+                </blockquote>
+            </div>
+        </section>
+        <script>
+            // Animated quote transitions
+            document.addEventListener('DOMContentLoaded', function () {
+                const quotes = [
+                    '"Try! Try! Try! But never Fail to try."',
+                    '"Doing something is better than doing nothing."',
+                    '"If you move 1cm each day, in 100 days you will cross 100cms."',
+                    '"Its not about how many times you fails, Its always about how many times you chose to rise.."'
+                ];
+                let quoteIndex = 0;
+                const quoteElem = document.getElementById('quoteText');
+                function showQuote(idx) {
+                    quoteElem.classList.remove('show');
+                    setTimeout(() => {
+                        quoteElem.innerHTML = quotes[idx];
+                        quoteElem.classList.add('show');
+                    }, 400);
+                }
+                showQuote(quoteIndex);
+                setInterval(() => {
+                    quoteIndex = (quoteIndex + 1) % quotes.length;
+                    showQuote(quoteIndex);
+                }, 4000);
+            });
+        </script>
     </main>
 
     <!--===== FOOTER =====-->
@@ -633,6 +776,14 @@
                 icon.classList.replace('bx-sun', 'bx-moon');
                 localStorage.setItem('theme', 'light');
             }
+        });
+
+        // Trigger nav animation on DOMContentLoaded
+        window.addEventListener('DOMContentLoaded', function () {
+            var navItems = document.querySelectorAll('.nav__list .nav__item');
+            navItems.forEach(function (item, i) {
+                item.style.animationPlayState = 'running';
+            });
         });
     </script>
 
