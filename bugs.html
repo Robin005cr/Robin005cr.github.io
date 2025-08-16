@@ -19,14 +19,43 @@
   <link rel="stylesheet" href="assets/css/bugs.css">
 </head>
 
+<h2> 1. cin in loop </h2>
+
 <body class="bg-white text-black font-sans leading-relaxed">
   <div class="max-w-5xl mx-auto p-6">
-    <header class="mb-10">
-      <h1 class="text-4xl font-bold heading-animate" style="color:#0096FF;">Bugs</h1>
-    </header>
 
     <section class="mb-10 code_container">
-      <h2 class="text-2xl font-semibold heading-animate" style="color:#0096FF;">Code Example</h2>
+      <h2 class="text-2xl font-semibold heading-animate" style="color:#0096FF;">Issue</h2>
+      <div class="code-container">
+        <button class="copy-icon" onclick="copyCode(this)"></button>
+        <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;limits&gt;
+
+using namespace std;
+
+int main()
+{
+    int number;
+
+    while (true)
+    {
+        cout &lt;&lt; "Enter an integer: ";
+        cin &gt;&gt; number;
+    }
+
+    return 0;
+}
+  </code></pre>
+      </div>
+    </section>
+  </div>
+<body class="bg-white text-black font-sans leading-relaxed">
+  <div class="max-w-5xl mx-auto p-6">
+
+
+    <section class="mb-10 code_container">
+      <h2 class="text-2xl font-semibold heading-animate" style="color:#0096FF;">Fix</h2>
       <div class="code-container">
         <button class="copy-icon" onclick="copyCode(this)"></button>
         <pre><code class="language-cpp">
