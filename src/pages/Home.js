@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useTypewriter } from '../hooks/useTypewriter';
+import ScrollReveal from 'scrollreveal';
 import './Home.css';
 
 const Home = () => {
