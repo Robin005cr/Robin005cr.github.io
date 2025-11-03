@@ -90,7 +90,7 @@ const Header = () => {
           <i className='bx bx-menu'></i>
         </div>
         
-        <div className="theme-toggle" id="theme-toggle" onClick={toggleTheme}>
+        <div className={`theme-toggle ${isDark ? 'active' : ''}`} id="theme-toggle" onClick={toggleTheme}>
           <i className={isDark ? 'bx bx-sun' : 'bx bx-moon'}></i>
         </div>
       </nav>

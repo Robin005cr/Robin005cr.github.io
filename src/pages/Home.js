@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useTypewriter } from '../hooks/useTypewriter';
 import ScrollReveal from 'scrollreveal';
 import './Home.css';
@@ -264,49 +265,49 @@ const Home = () => {
         <div className="skills__container bd-grid">
           <div>
             <div className="skills__data">
-              <a href="/prof_exp" className="skills__link">
+              <Link to="/prof_exp" className="skills__link">
                 <div className="skills__names">
                   <span className="skills__name">Professional Experience</span>
                   <i className='bx bx-link-external skills__icon'></i>
                 </div>
                 <div className="skills__bar skills__css"></div>
-              </a>
+              </Link>
             </div>
             <div className="skills__data">
-              <a href="/bugs" className="skills__link">
+              <Link to="/bugs" className="skills__link">
                 <div className="skills__names">
                   <span className="skills__name">Bugs</span>
                   <i className='bx bx-link-external skills__icon'></i>
                 </div>
                 <div className="skills__bar skills__css"></div>
-              </a>
+              </Link>
             </div>
             <div className="skills__data">
-              <a href="/shortcuts" className="skills__link">
+              <Link to="/shortcuts" className="skills__link">
                 <div className="skills__names">
                   <span className="skills__name">Shortcuts</span>
                   <i className='bx bx-link-external skills__icon'></i>
                 </div>
                 <div className="skills__bar skills__html"></div>
-              </a>
+              </Link>
             </div>
             <div className="skills__data">
-              <a href="/challenges" className="skills__link">
+              <Link to="/challenges" className="skills__link">
                 <div className="skills__names">
                   <span className="skills__name">Challenges</span>
                   <i className='bx bx-link-external skills__icon'></i>
                 </div>
                 <div className="skills__bar skills__js"></div>
-              </a>
+              </Link>
             </div>
             <div className="skills__data">
-              <a href="/trainings" className="skills__link">
+              <Link to="/trainings" className="skills__link">
                 <div className="skills__names">
                   <span className="skills__name">Trainings</span>
                   <i className='bx bx-link-external skills__icon'></i>
                 </div>
                 <div className="skills__bar skills__css"></div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

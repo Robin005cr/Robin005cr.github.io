@@ -1,9 +1,7 @@
-body {
+.bugs-page {
   background: #fff;
   color: #000;
   font-family: 'Fira Code', monospace;
-  margin: 0;
-  padding: 20px;
 }
 
 h2 {
@@ -63,4 +61,25 @@ pre {
 
 .copy-icon:after {
   content: '📋';
+}
+
+/* Dark theme overrides to match homepage palette */
+body.dark-theme .bugs-page {
+  background: #121212;
+  color: #e6edf3;
+}
+
+body.dark-theme .code-container {
+  border-color: #3a3a5a;
+}
+
+body.dark-theme pre {
+  background: #0f172a;
+  color: #e6edf3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .copy-icon {
+  background: #233554;
+  color: #b6c6ff;
 }
