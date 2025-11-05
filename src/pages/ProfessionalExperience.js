@@ -61,13 +61,14 @@ const ProfessionalExperience = () => {
         {/* ARi Job */}
         <header className="mb-10">
           <h1 id="job-ari" className="text-4xl font-bold text-teal-400">Autonomy Software Engineer – ARi</h1>
-          <p className="text-gray-400">January 2025 – Present</p>
+          <h3 id="job-ari" className="text-black">Client : Caterpillar</h3>
+          <p className="text-black">January 2025 – Present</p>
         </header>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-white mb-2">Lidar Perception</h2>
-          <p className="mb-4">IMS project was initially introduced in order to detect the activities of driver and alert the driver in case of emergency.</p>
-          <ul className="list-disc ml-6 space-y-2 text-gray-300">
+          <h2 className="text-2xl font-semibold text-black mb-2">Lidar Perception for Surface Hauling Truck</h2>
+          <p className="mb-4">The project is to develop a lidar perception system for a surface hauling truck to detect moving obstacles, path planning, and sensor fusion.</p>
+          <ul className="list-disc ml-6 space-y-2 text-black">
             <li>Engineered moving obstacle detection solutions leveraging lidar sensors.</li>
             <li>Built and optimized range image-to-point-cloud converters, enabling support for multiple lidar types.</li>
             <li>Created and maintained efficient parsers for ROS node communication.</li>
@@ -81,13 +82,13 @@ const ProfessionalExperience = () => {
         {/* Bosch Job */}
         <header className="mb-10">
           <h1 id="job-bosch" className="text-4xl font-bold text-teal-400">Embedded Developer – Bosch</h1>
-          <p className="text-gray-400">October 2022 – December 2024</p>
+          <p className="text-black">October 2022 – December 2024</p>
         </header>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-white mb-2">Interior Monitoring System (IMS)</h2>
+          <h2 className="text-2xl font-semibold text-black mb-2">Interior Monitoring System (IMS)</h2>
           <p className="mb-4">IMS project was initially introduced in order to detect the activities of driver and alert the driver in case of emergency.</p>
-          <ul className="list-disc ml-6 space-y-2 text-gray-300">
+          <ul className="list-disc ml-6 space-y-2 text-black">
             <li>Detects driver drowsiness, distraction, and impairment.</li>
             <li>Utilizes camera, steering signals, or both.</li>
             <li>IMS is also now expanded to monitor the occupant as well.</li>
@@ -97,15 +98,15 @@ const ProfessionalExperience = () => {
         </section>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>
+          <h2 className="text-2xl font-semibold text-black mb-4">Key Features</h2>
           <div className="grid grid-cols-1 md-grid-cols-2 gap-4">
-            <ul className="list-disc ml-6 space-y-2 text-gray-300">
+            <ul className="list-disc ml-6 space-y-2 text-black">
               <li><strong>Drowsiness:</strong> Yawning, eye blink, circadian/monotonous index</li>
               <li><strong>Microsleep:</strong> Blink-based short lapses</li>
               <li><strong>Impairment:</strong> Unfitness due to health, alcohol, or lack of response</li>
               <li><strong>Distraction:</strong> Phone usage, abnormal gaze</li>
             </ul>
-            <ul className="list-disc ml-6 space-y-2 text-gray-300">
+            <ul className="list-disc ml-6 space-y-2 text-black">
               <li><strong>Child & Animal Presence Detection</strong></li>
               <li><strong>Seatbelt Detection</strong></li>
               <li><strong>Theft Detection</strong></li>
@@ -115,8 +116,8 @@ const ProfessionalExperience = () => {
         </section>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-white mb-4">Roles & Responsibilities</h2>
-          <ul className="list-disc ml-6 space-y-2 text-gray-300">
+          <h2 className="text-2xl font-semibold text-black mb-4">Roles & Responsibilities</h2>
+          <ul className="list-disc ml-6 space-y-2 text-black">
             <li>Precondition & Error Handler</li>
             <li>Interface handling(Inputs,Outputs,Parameters)</li>
             <li>Mathematical Computations (Head/Eye movements)</li>
@@ -125,11 +126,11 @@ const ProfessionalExperience = () => {
         </section>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-white mb-4">Technical Contributions</h2>
+          <h2 className="text-2xl font-semibold text-black mb-4">Technical Contributions</h2>
           <div className="grid grid-cols-1 md-grid-cols-2 gap-4">
             <div>
               <h3 className="text-xl text-teal-300 mb-2">Embedded Tasks</h3>
-              <ul className="list-disc ml-6 space-y-2 text-gray-300">
+              <ul className="list-disc ml-6 space-y-2 text-black">
                 <li>Timers, CAN Signal Handling</li>
                 <li>Power & Sleep Cycle</li>
                 <li>Camera Parameter Management</li>
@@ -139,7 +140,7 @@ const ProfessionalExperience = () => {
             </div>
             <div>
               <h3 className="text-xl text-teal-300 mb-2">Application Layer</h3>
-              <ul className="list-disc ml-6 space-y-2 text-gray-300">
+              <ul className="list-disc ml-6 space-y-2 text-black">
                 <li>QAC Warning Fixes</li>
                 <li>CMake integration</li>
                 <li>Unit Testing (Google Test)</li>
@@ -151,16 +152,16 @@ const ProfessionalExperience = () => {
         {/* Gadgeon Job */}
         <header className="mb-10">
           <h1 id="job-gadgeon" className="text-4xl font-bold text-teal-400">Software Developer – Gadgeon Smart Systems</h1>
-          <p className="text-gray-400">July 2021 – September 2022</p>
+          <p className="text-black">July 2021 – September 2022</p>
         </header>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-white mb-2">Gateway Programming</h2>
+          <h2 className="text-2xl font-semibold text-black mb-2">Gateway Programming</h2>
           <p className="mb-4">
             Gateways are actually devices like routers or modems, which are mostly used for IOT devices purposes.
             The data from lot of sensors are sent to cloud, their encoding, decoding, authentication etc.. all are handled by gateway.
           </p>
-          <ul className="list-disc ml-6 space-y-2 text-gray-300">
+          <ul className="list-disc ml-6 space-y-2 text-black">
             <li>Gateways are mostly installed in warehouses, farm houses, malls etc..</li>
             <li>Ware house - Interfaced GPS sensor for the movement of trucks.</li>
             <li>Farm house - Developed the encoder-decoder for temperature and humidity sensors.</li>

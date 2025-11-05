@@ -141,6 +141,10 @@ img {
     background-color: var(--second-color);
     transition: 0.5s;
   }
+  
+  .nav__menu .nav__link {
+    color: #fff !important;
+  }
 }
 
 .nav__item {
