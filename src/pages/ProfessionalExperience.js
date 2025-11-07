@@ -68,11 +68,12 @@ const ProfessionalExperience = () => {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-2">Lidar Perception for Surface Hauling Truck</h2>
           <p className="mb-4">The project is to develop a lidar perception system for a surface hauling truck to detect moving obstacles, path planning, and sensor fusion.</p>
+          <h2 className="text-2xl font-semibold text-black mb-2">My Contributions</h2>
           <ul className="list-disc ml-6 space-y-2 text-black">
             <li>Engineered moving obstacle detection solutions leveraging lidar sensors.</li>
             <li>Built and optimized range image-to-point-cloud converters, enabling support for multiple lidar types.</li>
-            <li>Created and maintained efficient parsers for ROS node communication.</li>
-            <li>Integrated open-source point cloud libraries into C++ projects to accelerate development.</li>
+            <li>Developed boundary and berm detection feature for minesite.</li>
+            <li>Integrated open-source point cloud libraries(PCL) into C++ projects to accelerate development.</li>
             <li>Worked on path planning, sensor fusion, and SLAM algorithms.</li>
             <li>Drove KPI improvements by investigating and resolving root causes of KPI mismatches.</li>
             <li>Developed robust backend systems for a playback tool.</li>

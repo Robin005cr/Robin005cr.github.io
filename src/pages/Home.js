@@ -35,42 +35,42 @@ const Home = () => {
     {
       title: "Smart Trolley System",
       url: "https://github.com/Robin005cr/Smart_Trolley_System",
-      tags: ["C++", "Algorithms", "AI"],
+      tags: ["C++", "Path Planning"],
       description: "An intelligent shopping trolley system that uses AI and algorithms to automate item detection and checkout, improving retail efficiency.",
       image: "/assets/img/smart_trolley.jpg"
     },
     {
       title: "Calendar and Clock",
       url: "https://github.com/Robin005cr/Calendar-and-Clock",
-      tags: ["C++", "Algorithms", "AI"],
+      tags: ["C++", "STL"],
       description: "A Simple project to address the logical problems related to time.",
       image: "/assets/img/CalendarClock.jpg"
     },
     {
       title: "CPU-GPU selector",
       url: "https://github.com/Robin005cr/CPU-GPU_Selector",
-      tags: ["C++", "Algorithms", "AI"],
+      tags: ["C++", "Algorithms"],
       description: "A program which will decide the model training for machine learning tasks based on CPU clock usage.",
       image: "/assets/img/cpugpu.jpg"
     },
     {
       title: "Custom Protocol encoder - decoder",
       url: "https://github.com/Robin005cr/Custom_Protocol",
-      tags: ["C++", "Algorithms", "AI"],
+      tags: ["C++", "Algorithms"],
       description: "A method on how data is securely trasnferred among the services, cloud, layers etc..",
       image: "/assets/img/customprotocol.jpg"
     },
     {
       title: "Layered Communication",
       url: "https://github.com/Robin005cr/Layered-Communication",
-      tags: ["C++", "Algorithms", "AI"],
+      tags: ["C++", "Algorithms"],
       description: "This project focuses on how same data is handled in each layer and how each layer dependent or independent on near by layers.",
       image: "/assets/img/Layered.jpg"
     },
     {
       title: "Question Paper Set creator",
       url: "https://github.com/Robin005cr/Question_Paper_Set_Creator",
-      tags: ["C++", "File handling", "AI"],
+      tags: ["C++", "File handling"],
       description: "A tool that generates multiple randomized question papers from a given question bank.",
       image: "/assets/img/questionPaper.jpg"
     }
