@@ -73,6 +73,7 @@ const ProfessionalExperience = () => {
             <li>Engineered moving obstacle detection solutions leveraging lidar sensors.</li>
             <li>Built and optimized range image-to-point-cloud converters, enabling support for multiple lidar types.</li>
             <li>Developed boundary and berm detection feature for minesite.</li>
+            <li>Supported the development of the rut detection feature for haul trucks.</li>
             <li>Integrated open-source point cloud libraries(PCL) into C++ projects to accelerate development.</li>
             <li>Worked on path planning, sensor fusion, and SLAM algorithms.</li>
             <li>Drove KPI improvements by investigating and resolving root causes of KPI mismatches.</li>
@@ -88,14 +89,11 @@ const ProfessionalExperience = () => {
 
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-2">Interior Monitoring System (IMS)</h2>
-          <p className="mb-4">IMS project was initially introduced in order to detect the activities of driver and alert the driver in case of emergency.</p>
-          <ul className="list-disc ml-6 space-y-2 text-black">
-            <li>Detects driver drowsiness, distraction, and impairment.</li>
-            <li>Utilizes camera, steering signals, or both.</li>
-            <li>IMS is also now expanded to monitor the occupant as well.</li>
-            <li>Alerts via haptics, acoustics, or infotainment display.</li>
-            <li>Combines Machine Learning with Embedded Systems.</li>
-          </ul>
+          <p className="mb-4">IMS project was initially introduced in order to detect the activities of driver
+            and alert the driver in case of emergency.
+            It will detects driver drowsiness, distraction, and impairment.
+            The ECU utilizes camera, steering signals as input.
+            Alerts via haptics, acoustics, or infotainment display.</p>
         </section>
 
         <section className="mb-10">
@@ -106,8 +104,6 @@ const ProfessionalExperience = () => {
               <li><strong>Microsleep:</strong> Blink-based short lapses</li>
               <li><strong>Impairment:</strong> Unfitness due to health, alcohol, or lack of response</li>
               <li><strong>Distraction:</strong> Phone usage, abnormal gaze</li>
-            </ul>
-            <ul className="list-disc ml-6 space-y-2 text-black">
               <li><strong>Child & Animal Presence Detection</strong></li>
               <li><strong>Seatbelt Detection</strong></li>
               <li><strong>Theft Detection</strong></li>
@@ -117,37 +113,18 @@ const ProfessionalExperience = () => {
         </section>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-black mb-4">Roles & Responsibilities</h2>
+          <h2 className="text-2xl font-semibold text-black mb-4">My Contributions</h2>
           <ul className="list-disc ml-6 space-y-2 text-black">
             <li>Precondition & Error Handler</li>
             <li>Interface handling(Inputs,Outputs,Parameters)</li>
             <li>Mathematical Computations (Head/Eye movements)</li>
             <li>Algorithm Development (Circadian rhythm)</li>
+            <li>Timers, CAN Signal Handling</li>
+            <li>Power & Sleep Cycle</li>
+            <li>QAC Warning Fixes</li>
+            <li>CMake integration</li>
+            <li>Unit Testing (Google Test)</li>
           </ul>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-black mb-4">Technical Contributions</h2>
-          <div className="grid grid-cols-1 md-grid-cols-2 gap-4">
-            <div>
-              <h3 className="text-xl text-teal-300 mb-2">Embedded Tasks</h3>
-              <ul className="list-disc ml-6 space-y-2 text-black">
-                <li>Timers, CAN Signal Handling</li>
-                <li>Power & Sleep Cycle</li>
-                <li>Camera Parameter Management</li>
-                <li>Driver Authentication & Modes</li>
-                <li>Warning Handlers (Haptics, Acoustics)</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl text-teal-300 mb-2">Application Layer</h3>
-              <ul className="list-disc ml-6 space-y-2 text-black">
-                <li>QAC Warning Fixes</li>
-                <li>CMake integration</li>
-                <li>Unit Testing (Google Test)</li>
-              </ul>
-            </div>
-          </div>
         </section>
 
         {/* Gadgeon Job */}
@@ -170,7 +147,7 @@ const ProfessionalExperience = () => {
           </ul>
         </section>
       </div>
-    </div>
+    </div >
   );
 };
 

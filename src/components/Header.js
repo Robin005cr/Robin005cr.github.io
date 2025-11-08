@@ -16,6 +16,9 @@ const Header = () => {
     { path: '/', label: 'Contact', hash: '#contact' },
   ];
 
+  // Only show header on home page
+  const isHomePage = location.pathname === '/';
+
   const handleNavClick = (e, hash) => {
     if (location.pathname !== '/') {
       // If not on home page, navigate to home first
@@ -62,6 +65,11 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Hide entire header on sub-pages (after all hooks are called)
+  if (!isHomePage) {
+    return null;
+  }
 
   return (
     <header className="l-header">

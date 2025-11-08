@@ -238,6 +238,9 @@ img {
   right: 0;
   bottom: 0;
   width: 260px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .home__blob {
@@ -590,13 +593,15 @@ img {
     justify-content: center;
   }
   .home__img {
-    width: 180px !important;
+    width: 100% !important;
     min-width: 0;
     margin: 2rem 0 0 0;
     justify-content: center !important;
     align-items: center !important;
     position: static !important;
     display: flex !important;
+    right: auto !important;
+    bottom: auto !important;
   }
   .profile-animated-border {
     width: 150px;

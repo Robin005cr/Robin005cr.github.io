@@ -163,7 +163,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="home__img" style={{ justifyContent: 'flex-end', display: 'flex', width: '100%' }}>
+        <div className="home__img">
           <div className="profile-animated-border">
             <img src="/assets/img/robin.png" alt="Robin CR" className="profile-img" />
           </div>

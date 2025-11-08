@@ -17,7 +17,7 @@ body.dark-theme .prof-exp-page {
 }
 
 .back-button {
-  background-color: #0d9488;
+  background-color: #4e91ba;
   color: white;
   font-weight: 600;
   padding: 0.5rem 1rem;
@@ -30,7 +30,7 @@ body.dark-theme .prof-exp-page {
 }
 
 .back-button:hover {
-  background-color: #0f766e;
+  background-color: #3d7a9e;
 }
 
 .timeline {
@@ -70,8 +70,8 @@ html {
 
 .timeline-link:hover,
 .timeline-link:focus {
-  background: rgba(4, 194, 201, 0.08);
-  color: #04c2c9;
+  background: rgba(78, 145, 186, 0.08);
+  color: #4e91ba;
   transform: translateY(-2px);
 }
 
@@ -88,16 +88,20 @@ html {
   top: 5px;
   width: 18px;
   height: 18px;
-  background-color: #04c2c9;
+  background-color: #4e91ba;
   border: 3px solid #fff;
   border-radius: 50%;
   z-index: 1;
 }
 
+body.dark-theme .timeline-item::before {
+  border-color: #121212;
+}
+
 .timeline-item h3 {
   margin: 0 0 5px;
   font-size: 1.1rem;
-  color: #04c2c9;
+  color: #4e91ba;
 }
 
 .timeline-item span {
@@ -144,7 +148,7 @@ body.dark-theme .timeline-item span {
 }
 
 .text-teal-400 {
-  color: #2dd4bf;
+  color: #4e91ba;
 }
 
 .text-gray-400 {
@@ -204,7 +208,7 @@ body.dark-theme .timeline-item span {
 }
 
 .text-teal-300 {
-  color: #5eead4;
+  color: #4e91ba;
 }
 
 @media (max-width: 600px) {
