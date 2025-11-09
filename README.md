@@ -36,16 +36,6 @@ robin005cr.github.io/
 └── README.md
 ```
 
-## Asset Management
-
-**Important**: Static assets (images, PDFs, etc.) need to be in the `public/assets` folder to be accessible in React. 
-
-If your assets are currently in the root `assets/` folder:
-1. Copy them to `public/assets/` or create a symlink
-2. Assets are referenced in code as `/assets/img/image.jpg` (starting with `/`)
-
-CSS files are in `src/assets/css/` and imported directly in components.
-
 ## Getting Started
 
 ### Prerequisites
@@ -75,30 +65,8 @@ To create a production build:
 npm run build
 ```
 
-This creates an optimized build in the `build` folder that can be deployed to any static hosting service.
-
-## Features
-
-- ✅ React Router for navigation
-- ✅ Custom hooks for theme toggle and typewriter effect
-- ✅ Responsive design maintained
-- ✅ All original pages converted to React components
-- ✅ Modern React patterns and best practices
-
-## Converting from Vanilla HTML
-
-The original HTML/CSS/JS structure has been converted to:
-
-- **HTML** → React Components (JSX)
-- **JavaScript** → React Hooks and Components
-- **CSS** → Maintained, organized by component
-- **Routing** → React Router DOM
-- **Assets** → Moved to public folder (React convention)
-
 ## Deployment
 
-For GitHub Pages deployment, you can use the `build` folder or configure React Router to work with GitHub Pages (may require hash routing).
-
-## Original Structure
-
-The original HTML files are preserved in the root directory. The React version is in the `src/` and `public/` directories.
+```bash
+npm run deploy
+```
