@@ -151,7 +151,7 @@ const Home = () => {
             >
               <img src="/assets/img/hackerrank.png" alt="HackerRank profile" style={{ width: '24px', height: '24px' }} />
             </a>
-            <a
+            {/* <a
               href="https://www.codechef.com/users/robin_005_cr"
               target="_blank"
               rel="noopener noreferrer"
@@ -159,7 +159,7 @@ const Home = () => {
               title="CodeChef profile"
             >
               <img src="/assets/img/codechef.jpg" alt="CodeChef profile" style={{ width: '24px', height: '24px' }} />
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -181,8 +181,7 @@ const Home = () => {
             <h2 className="about__subtitle">I'am Robin</h2>
             <p className="about__text" style={{ textAlign: 'justify', margin: '0 auto', maxWidth: '600px' }}>
               I am a software developer, mostly working with C, C++, and occasionally with Ruby & Python. Code
-              → Debug → Test: I consider all these phases equally important during the product cycle.
-              This page is a part of my journey, where I document the challenges, projects, shortcuts, and
+              → Debug → Test. This page is a part of my journey, where I document the challenges, projects, shortcuts, and
               lessons I encounter in my professional life.
             </p>
             <div className="cv-buttons" style={{ marginTop: '1rem' }}>

@@ -12,7 +12,16 @@ const Trainings = () => {
         <div className="mb-6">
           <button
             onClick={() => navigate(-1)}
-            className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded shadow"
+            style={{
+              backgroundColor: '#0d9488',
+              color: 'white',
+              fontWeight: 600,
+              padding: '0.5rem 1rem',
+              borderRadius: '0.25rem',
+              border: 'none',
+              cursor: 'pointer',
+              marginBottom: '1.5rem'
+            }}
           >
             ← Back
           </button>
