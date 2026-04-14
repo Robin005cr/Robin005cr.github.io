@@ -88,7 +88,7 @@ const ProfessionalExperience = () => {
         </header>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-black mb-2">Interior Monitoring System (IMS)</h2>
+          <h2 className="text-2xl font-semibold text-black mb-2">1. Interior Monitoring System (IMS)</h2>
           <p className="mb-4">IMS project was initially introduced in order to detect the activities of driver
             and alert the driver in case of emergency.
             It will detects driver drowsiness, distraction, and impairment.
@@ -115,15 +115,15 @@ const ProfessionalExperience = () => {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-4">My Contributions</h2>
           <ul className="list-disc ml-6 space-y-2 text-black">
-            <li>Precondition & Error Handler</li>
-            <li>Interface handling(Inputs,Outputs,Parameters)</li>
-            <li>Mathematical Computations (Head/Eye movements)</li>
-            <li>Algorithm Development (Circadian rhythm)</li>
-            <li>Timers, CAN Signal Handling</li>
-            <li>Power & Sleep Cycle</li>
-            <li>QAC Warning Fixes</li>
-            <li>CMake integration</li>
-            <li>Unit Testing (Google Test)</li>
+            <li>Developed algorithms for driver drowsiness module in C++.</li>
+            <li>	Developed playback tool for simulating driver behavior.</li>
+            <li>	Implemented a module to monitor facial features of driver.</li>
+            <li>	Developed an algorithm for circadian rhythm to handle drowsiness in drivers.</li>
+            <li>	Contributed to the development of hardware and software reset for camera.</li>
+            <li>	Modules implementations such as interfaces, precondition handlers, error handlers, schedulers etc. </li>
+            <li>	Successfully addressed and resolved Level 8 and 9 QAC++ warnings in the codebase.</li>
+            <li>	Worked in the project migration on virtual machine to docker.</li>
+
           </ul>
         </section>
 
