@@ -66,7 +66,8 @@ npm run build
 ```
 
 ## Deployment
-
+- Commit and push the changes to the git.
+- Execute the below comment, this will execute build + publish. This is mainly used in github pages.
 ```bash
 npm run deploy
 ```

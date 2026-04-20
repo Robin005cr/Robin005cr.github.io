@@ -115,7 +115,7 @@ const ProfessionalExperience = () => {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-4">My Contributions</h2>
           <ul className="list-disc ml-6 space-y-2 text-black">
-            <li>Developed algorithms for driver drowsiness module in C++.</li>
+            <li>  Developed algorithms for driver drowsiness module in C++.</li>
             <li>	Developed playback tool for simulating driver behavior.</li>
             <li>	Implemented a module to monitor facial features of driver.</li>
             <li>	Developed an algorithm for circadian rhythm to handle drowsiness in drivers.</li>
@@ -123,6 +123,28 @@ const ProfessionalExperience = () => {
             <li>	Modules implementations such as interfaces, precondition handlers, error handlers, schedulers etc. </li>
             <li>	Successfully addressed and resolved Level 8 and 9 QAC++ warnings in the codebase.</li>
             <li>	Worked in the project migration on virtual machine to docker.</li>
+
+          </ul>
+        </section>
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold text-black mb-2">2. Digital Instrument Cluster</h2>
+          <p className="mb-4">IMS project was initially introduced in order to detect the activities of driver
+            and alert the driver in case of emergency.
+            It will detects driver drowsiness, distraction, and impairment.
+            The ECU utilizes camera, steering signals as input.
+            Alerts via haptics, acoustics, or infotainment display.</p>
+        </section>
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold text-black mb-4">My Contributions</h2>
+          <ul className="list-disc ml-6 space-y-2 text-black">
+            <li>	Worked in all phases of Agile Scrum methodology (Requirement - Design - Coding - Testing). </li>
+            <li>Contributed to the development and integration of the Trip Computer module.</li>
+            <li>Identified and resolved a critical tell-tale toggling issue.</li>
+            <li>Investigated, raised, and fixed a bootloader timeout issue in the ECU.</li>
+            <li>Writing unit tests and performs functionality testing to ensure software functionality.</li>
+            <li>Implemented an algorithm that will modify the fixed parameters in RTE layer into a configurable in application layer.</li>
+            <li>Base level knowledge on Diagnostics, Bootloader and RTE layer is gained.</li>
+
 
           </ul>
         </section>
