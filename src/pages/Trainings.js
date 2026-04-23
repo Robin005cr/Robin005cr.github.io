@@ -28,7 +28,7 @@ const Trainings = () => {
         </div>
 
         <header className="mb-10">
-          <h1 className="text-4xl font-bold" style={{ color: '#0096FF' }}>Trainings</h1>
+          <h1 className="text-4xl font-bold" style={{ color: '#0096FF' }}>Certifications</h1>
         </header>
 
         <section className="mb-10">

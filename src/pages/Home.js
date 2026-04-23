@@ -236,6 +236,25 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="roles2 section" id="roles">
+        <h2 className="section-title">Roles I can Play</h2>
+        <div className="roles__container bd-grid">
+          <div>
+            <p className="roles__text">
+              • C++ with Linux developer<br />
+              • ADAS Algorithm developer<br />
+              • Perception Engineer<br />
+              • KPI Engineer<br />
+              • HPC Engineer<br />
+              • ROS developer<br />
+              • System developer<br />
+              • Performance Engineer
+              
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/*===== TOOLS =====*/}
       <section className="tools section" id="tools">
         <h2 className="section-title">Tools</h2>

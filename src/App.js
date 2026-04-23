@@ -22,7 +22,7 @@ function App() {
             <Route path="/prof_exp" element={<ProfessionalExperience />} />
             <Route path="/challenges" element={<Challenges />} />
             <Route path="/shortcuts" element={<Shortcuts />} />
-            <Route path="/trainings" element={<Trainings />} />
+            <Route path="/trainings" element={<Certifications />} />
           </Routes>
         </main>
         <Footer />

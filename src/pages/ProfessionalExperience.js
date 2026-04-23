@@ -95,7 +95,10 @@ const ProfessionalExperience = () => {
             The ECU utilizes camera, steering signals as input.
             Alerts via haptics, acoustics, or infotainment display.</p>
         </section>
-
+        {/* IMS Project Image */}
+        <div className="flex justify-center mb-10">
+          <img src="/assets/img/dms.png" alt="Interior Monitoring System" style={{ maxWidth: '400px', width: '100%', borderRadius: '8px' }} />
+        </div>
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-4">Key Features</h2>
           <div className="grid grid-cols-1 md-grid-cols-2 gap-4">
@@ -128,12 +131,13 @@ const ProfessionalExperience = () => {
         </section>
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-2">2. Digital Instrument Cluster</h2>
-          <p className="mb-4">IMS project was initially introduced in order to detect the activities of driver
-            and alert the driver in case of emergency.
-            It will detects driver drowsiness, distraction, and impairment.
-            The ECU utilizes camera, steering signals as input.
-            Alerts via haptics, acoustics, or infotainment display.</p>
+          <p className="mb-4">DIC is a digital display that will show the necessary measurements like speed, fuel level,
+            time , indications to the driver.</p>
         </section>
+        {/* Digital Instrument Cluster Image */}
+        <div className="flex justify-center mb-10">
+          <img src="/assets/img/cluster.jpg" alt="Digital Instrument Cluster" style={{ maxWidth: '400px', width: '100%', borderRadius: '8px' }} />
+        </div>
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-4">My Contributions</h2>
           <ul className="list-disc ml-6 space-y-2 text-black">
