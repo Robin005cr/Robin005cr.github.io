@@ -7,7 +7,7 @@ import Bugs from './pages/Bugs';
 import ProfessionalExperience from './pages/ProfessionalExperience';
 import Challenges from './pages/Challenges';
 import Shortcuts from './pages/Shortcuts';
-import Trainings from './pages/Trainings';
+import Certifications from './pages/Certifications';
 import './App.css';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
             <Route path="/prof_exp" element={<ProfessionalExperience />} />
             <Route path="/challenges" element={<Challenges />} />
             <Route path="/shortcuts" element={<Shortcuts />} />
-            <Route path="/trainings" element={<Certifications />} />
+            <Route path="/certifications" element={<Certifications />} />
           </Routes>
         </main>
         <Footer />

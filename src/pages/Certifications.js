@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
 
-const Trainings = () => {
+const Certifications = () => {
   const navigate = useNavigate();
   const { isDark } = useTheme();
 
@@ -69,5 +69,5 @@ const Trainings = () => {
   );
 };
 
-export default Trainings;
+export default Certifications;
 
