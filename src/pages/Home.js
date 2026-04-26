@@ -319,9 +319,9 @@ const Home = () => {
               </Link>
             </div>
             <div className="skills__data">
-              <Link to="/trainings" className="skills__link">
+              <Link to="/certifications" className="skills__link">
                 <div className="skills__names">
-                  <span className="skills__name">Trainings</span>
+                  <span className="skills__name">Certifications</span>
                   <i className='bx bx-link-external skills__icon'></i>
                 </div>
                 <div className="skills__bar skills__css"></div>

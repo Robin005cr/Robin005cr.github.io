@@ -139,6 +139,21 @@ const ProfessionalExperience = () => {
           <img src="/assets/img/cluster.jpg" alt="Digital Instrument Cluster" style={{ maxWidth: '400px', width: '100%', borderRadius: '8px' }} />
         </div>
         <section className="mb-10">
+          <h2 className="text-2xl font-semibold text-black mb-4">Key Features</h2>
+          <div className="grid grid-cols-1 md-grid-cols-2 gap-4">
+            <ul className="list-disc ml-6 space-y-2 text-black">
+              <li><strong>Trip Computer:</strong> Yawning, eye blink, circadian/monotonous index</li>
+              <li><strong>Tell tale:</strong> Blink-based short lapses</li>
+              <li><strong>Impairment:</strong> Unfitness due to health, alcohol, or lack of response</li>
+              <li><strong>Distraction:</strong> Phone usage, abnormal gaze</li>
+              <li><strong>Child & Animal Presence Detection</strong></li>
+              <li><strong>Seatbelt Detection</strong></li>
+              <li><strong>Theft Detection</strong></li>
+              <li><strong>Gesture Detection:</strong> Safety gestures (e.g., kidnap alert)</li>
+            </ul>
+          </div>
+        </section>
+        <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-4">My Contributions</h2>
           <ul className="list-disc ml-6 space-y-2 text-black">
             <li>	Worked in all phases of Agile Scrum methodology (Requirement - Design - Coding - Testing). </li>
