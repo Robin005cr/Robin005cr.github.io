@@ -89,12 +89,14 @@ const ProfessionalExperience = () => {
 
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-2">1. Interior Monitoring System (IMS)</h2>
+          <h3 id="job-bosch" className="text-black">Client : Ford, Stellantis</h3>
           <p className="mb-4">IMS project was initially introduced in order to detect the activities of driver
             and alert the driver in case of emergency.
             It will detects driver drowsiness, distraction, and impairment.
             The ECU utilizes camera, steering signals as input.
             Alerts via haptics, acoustics, or infotainment display.</p>
         </section>
+
         {/* IMS Project Image */}
         <div className="flex justify-center mb-10">
           <img src="/assets/img/dms.png" alt="Interior Monitoring System" style={{ maxWidth: '400px', width: '100%', borderRadius: '8px' }} />
@@ -131,9 +133,10 @@ const ProfessionalExperience = () => {
         </section>
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-2">2. Digital Instrument Cluster</h2>
-          <p className="mb-4">DIC is a digital display that will show the necessary measurements like speed, fuel level,
-            time , indications to the driver.</p>
+          <h3 id="job-bosch" className="text-black">Client : Volvo </h3>
+          <p className="mb-4">DIC is a digital display that will show the necessary measurements like speed,fuel-level,time,indications to the driver.</p>
         </section>
+
         {/* Digital Instrument Cluster Image */}
         <div className="flex justify-center mb-10">
           <img src="/assets/img/cluster.jpg" alt="Digital Instrument Cluster" style={{ maxWidth: '400px', width: '100%', borderRadius: '8px' }} />
@@ -142,14 +145,10 @@ const ProfessionalExperience = () => {
           <h2 className="text-2xl font-semibold text-black mb-4">Key Features</h2>
           <div className="grid grid-cols-1 md-grid-cols-2 gap-4">
             <ul className="list-disc ml-6 space-y-2 text-black">
-              <li><strong>Trip Computer:</strong> Yawning, eye blink, circadian/monotonous index</li>
-              <li><strong>Tell tale:</strong> Blink-based short lapses</li>
-              <li><strong>Impairment:</strong> Unfitness due to health, alcohol, or lack of response</li>
-              <li><strong>Distraction:</strong> Phone usage, abnormal gaze</li>
-              <li><strong>Child & Animal Presence Detection</strong></li>
-              <li><strong>Seatbelt Detection</strong></li>
-              <li><strong>Theft Detection</strong></li>
-              <li><strong>Gesture Detection:</strong> Safety gestures (e.g., kidnap alert)</li>
+              <li><strong>Trip Computer:</strong> Trip distance for multiple trips</li>
+              <li><strong>Tell tale:</strong>  Warning indicators and alerts for driver</li>
+              <li><strong>Head Up display:</strong> Projects the navigation to the windshield</li>
+              <li><strong>Connected car indicators:</strong> Display the phone and key connectivity</li>
             </ul>
           </div>
         </section>
