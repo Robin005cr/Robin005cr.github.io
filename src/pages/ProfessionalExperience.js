@@ -78,6 +78,10 @@ const ProfessionalExperience = () => {
             <li>Worked on path planning, sensor fusion, and SLAM algorithms.</li>
             <li>Drove KPI improvements by investigating and resolving root causes of KPI mismatches.</li>
             <li>Developed robust backend systems for a playback tool.</li>
+            <li>	Configured and managed ROS TF tree, defining coordinate frames and static transforms via YAML.</li>
+            <li>	Developed a utility to visualize vehicle movement with the help of plotly library.</li>
+            <li>Performed core dump analysis to identify root causes of system crashes and runtime failures.</li>
+
           </ul>
         </section>
 
