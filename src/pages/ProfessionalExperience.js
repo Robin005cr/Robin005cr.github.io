@@ -64,7 +64,10 @@ const ProfessionalExperience = () => {
           <h3 id="job-ari" className="text-black">Client : Caterpillar</h3>
           <p className="text-black">January 2025 – Present</p>
         </header>
-
+         {/* Surface Haul Image */}
+        <div className="flex justify-center mb-10">
+          <img src="/assets/img/haulTrek.jpg" alt="Surface Hauling: Lidar Perception" style={{ maxWidth: '400px', width: '100%', borderRadius: '8px' }} />
+        </div>
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-black mb-2">Lidar Perception for Surface Hauling Truck</h2>
           <p className="mb-4">The project is to develop a lidar perception system for a surface hauling truck to detect moving obstacles, path planning, and sensor fusion.</p>

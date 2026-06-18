@@ -41,7 +41,7 @@ const Certifications = () => {
             <li>Proper understanding of Linux Fundamentals (System calls, Booting, file system) is gained.</li>
           </ul>
           <a
-            href="assets/certificates/ESP-STU-2021-00012_Robin.pdf"
+            href="/assets/certificates/ESP-STU-2021-00012_Robin.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition"
@@ -60,7 +60,7 @@ const Certifications = () => {
             <li>Clean coding guidelines and common practices were addressed.</li>
           </ul>
           <a
-            href="assets/certificates/ESP-STU-2021-00012_Robin.pdf"
+            href="/assets/certificates/ESP-STU-2021-00012_Robin.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition"
@@ -75,7 +75,7 @@ const Certifications = () => {
             <li>Skills, prompts, agents</li>
             <li>MCP</li>
             <li>AI Fluency</li>
-            <li> Customs prompts and Agents</li>
+            <li>Customs prompts and Agents</li>
           </ul>
           <a
             href="assets/certificates/ESP-STU-2021-00012_Robin.pdf"
