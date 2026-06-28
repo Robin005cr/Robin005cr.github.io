@@ -2,17 +2,15 @@ import { useState, useEffect } from 'react';
 
 export const useTheme = () => {
   const [isDark, setIsDark] = useState(() => {
-    // Check localStorage on initial load
     const savedTheme = localStorage.getItem('theme');
-    return savedTheme === 'dark';
+    return savedTheme ? savedTheme === 'dark' : true;
   });
 
   useEffect(() => {
-    // Apply theme to body
     if (isDark) {
-      document.body.classList.add('dark-theme');
+      document.body.classList.remove('light-theme');
     } else {
-      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
     }
   }, [isDark]);
 
@@ -26,4 +24,3 @@ export const useTheme = () => {
 
   return { isDark, toggleTheme };
 };
-

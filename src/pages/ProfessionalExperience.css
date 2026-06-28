@@ -1,15 +1,18 @@
 .prof-exp-page {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  font-family: var(--font-body, Arial, sans-serif);
+  background-color: var(--color-bg, #060b14);
+  color: var(--color-text, #e2e8f0);
   margin: 0;
-  padding: 20px;
+  padding: calc(var(--header-height, 4rem) + 1rem) 1.5rem 2rem;
   min-height: 100vh;
+  max-width: var(--container-max, 1140px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
-body.dark-theme .prof-exp-page {
-  background-color: #121212;
-  color: #e6edf3;
+body.light-theme .prof-exp-page {
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 .prof-exp-page h2 {
@@ -51,7 +54,7 @@ body.dark-theme .prof-exp-page {
   margin-left: -1px;
 }
 
-body.dark-theme .timeline::after {
+body:not(.light-theme) .timeline::after {
   background-color: #3a3a5a;
 }
 
@@ -94,7 +97,7 @@ html {
   z-index: 1;
 }
 
-body.dark-theme .timeline-item::before {
+body:not(.light-theme) .timeline-item::before {
   border-color: #121212;
 }
 
@@ -109,7 +112,7 @@ body.dark-theme .timeline-item::before {
   color: #6b7280;
 }
 
-body.dark-theme .timeline-item span {
+body:not(.light-theme) .timeline-item span {
   color: #9ca3af;
 }
 

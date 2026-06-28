@@ -1,7 +1,7 @@
 .bugs-page {
-  background: #fff;
-  color: #000;
-  font-family: 'Fira Code', monospace;
+  background: var(--color-bg, #060b14);
+  color: var(--color-text, #e2e8f0);
+  font-family: var(--font-mono, 'Fira Code', monospace);
 }
 
 h2 {
@@ -63,23 +63,23 @@ pre {
   content: '📋';
 }
 
-/* Dark theme overrides to match homepage palette */
-body.dark-theme .bugs-page {
-  background: #121212;
-  color: #e6edf3;
+/* Dark theme (default) overrides */
+body:not(.light-theme) .bugs-page {
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
-body.dark-theme .code-container {
-  border-color: #3a3a5a;
+body:not(.light-theme) .code-container {
+  border-color: var(--color-border, #3a3a5a);
 }
 
-body.dark-theme pre {
+body:not(.light-theme) pre {
   background: #0f172a;
   color: #e6edf3;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-theme .copy-icon {
+body:not(.light-theme) .copy-icon {
   background: #233554;
   color: #b6c6ff;
 }

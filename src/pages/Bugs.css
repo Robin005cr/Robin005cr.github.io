@@ -1,12 +1,15 @@
 @import '../assets/css/bugs.css';
 
 .bugs-page {
-  background: #fff;
-  color: #000;
-  font-family: 'Fira Code', monospace;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono, 'Fira Code', monospace);
   margin: 0;
-  padding: 20px;
+  padding: calc(var(--header-height, 4rem) + 1rem) 1.5rem 2rem;
   min-height: 100vh;
+  max-width: var(--container-max, 1140px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .back-button {

@@ -5,24 +5,21 @@ import './Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { isDark, toggleTheme } = useTheme();
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const navLinks = [
-    { path: '/', label: 'Home', hash: '#home' },
-    { path: '/', label: 'About me', hash: '#about' },
-    { path: '/', label: 'Sections', hash: '#skills' },
-    { path: '/', label: 'Projects', hash: '#project' },
-    { path: '/', label: 'Contact', hash: '#contact' },
+    { label: 'About', hash: '#about' },
+    { label: 'Domains', hash: '#domains' },
+    { label: 'Projects', hash: '#project' },
+    { label: 'Contact', hash: '#contact' },
   ];
-
-  // Only show header on home page
-  const isHomePage = location.pathname === '/';
 
   const handleNavClick = (e, hash) => {
     if (location.pathname !== '/') {
-      // If not on home page, navigate to home first
-      window.location.href = `/${hash}`;
+      window.location.href = `/#${hash.replace('#', '')}`;
       return;
     }
     e.preventDefault();
@@ -33,73 +30,87 @@ const Header = () => {
     setMenuOpen(false);
   };
 
-  const isActiveLink = (hash) => {
-    if (location.pathname !== '/') return false;
-    const element = document.querySelector(hash);
-    if (!element) return false;
-    const rect = element.getBoundingClientRect();
-    return rect.top <= 100 && rect.bottom >= 100;
-  };
-
   useEffect(() => {
     const handleScroll = () => {
-      // Update active link on scroll
+      setScrolled(window.scrollY > 20);
+
+      if (!isHomePage) return;
+
       const sections = document.querySelectorAll('section[id]');
-      const scrollY = window.scrollY;
-      
+      const scrollY = window.scrollY + 100;
+
       sections.forEach((section) => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 58;
-        const sectionId = section.getAttribute('id');
-        const navItem = document.querySelector(`.nav__menu a[href*="${sectionId}"]`);
-        
-        if (navItem && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          document.querySelectorAll('.nav__link').forEach(link => {
-            link.classList.remove('active-link');
-          });
-          navItem.classList.add('active-link');
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        const link = document.querySelector(`.nav__link[data-section="${id}"]`);
+
+        if (link && scrollY >= top && scrollY < top + height) {
+          document.querySelectorAll('.nav__link').forEach(l => l.classList.remove('active-link'));
+          link.classList.add('active-link');
         }
       });
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
 
-  // Hide entire header on sub-pages (after all hooks are called)
-  if (!isHomePage) {
-    return null;
-  }
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
 
   return (
-    <header className="l-header">
-      <nav className="nav bd-grid">
-        <div>
-          <Link to="/" className="nav__logo">Robin CR</Link>
-        </div>
+    <header className={`l-header ${scrolled ? 'scrolled' : ''}`}>
+      <nav className="nav">
+        <Link to="/" className="nav__logo">
+          <span className="nav__logo-dot" />
+          Robin CR
+        </Link>
 
-        <div className={`nav__menu ${menuOpen ? 'show' : ''}`} id="nav-menu">
-          <ul className="nav__list">
-            {navLinks.map((link, index) => (
-              <li key={index} className="nav__item">
-                <a
-                  href={link.path === '/' ? link.hash : link.path}
-                  className={`nav__link ${isActiveLink(link.hash) ? 'active-link' : ''}`}
-                  onClick={(e) => handleNavClick(e, link.hash)}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {isHomePage ? (
+          <div className={`nav__menu ${menuOpen ? 'show' : ''}`}>
+            <ul className="nav__list">
+              {navLinks.map((link) => (
+                <li key={link.hash} className="nav__item">
+                  <a
+                    href={link.hash}
+                    className="nav__link"
+                    data-section={link.hash.replace('#', '')}
+                    onClick={(e) => handleNavClick(e, link.hash)}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <Link to="/" className="nav__back">
+            <i className="bx bx-arrow-back" />
+            Back to Home
+          </Link>
+        )}
 
-        <div className="nav__toggle" id="nav-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          <i className='bx bx-menu'></i>
-        </div>
-        
-        <div className={`theme-toggle ${isDark ? 'active' : ''}`} id="theme-toggle" onClick={toggleTheme}>
-          <i className={isDark ? 'bx bx-sun' : 'bx bx-moon'}></i>
+        <div className="nav__actions">
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            <i className={isDark ? 'bx bx-sun' : 'bx bx-moon'} />
+          </button>
+          {isHomePage && (
+            <button
+              type="button"
+              className="nav__toggle"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              <i className={menuOpen ? 'bx bx-x' : 'bx bx-menu'} />
+            </button>
+          )}
         </div>
       </nav>
     </header>
@@ -107,4 +118,3 @@ const Header = () => {
 };
 
 export default Header;
-
