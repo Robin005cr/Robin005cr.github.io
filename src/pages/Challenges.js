@@ -6,18 +6,6 @@ const Challenges = () => {
 
   return (
     <div style={{ padding: '20px', minHeight: '100vh' }}>
-      <button onClick={() => navigate(-1)} style={{
-        backgroundColor: '#0d9488',
-        color: 'white',
-        fontWeight: '600',
-        padding: '0.5rem 1rem',
-        borderRadius: '0.25rem',
-        border: 'none',
-        cursor: 'pointer',
-        marginBottom: '1.5rem'
-      }}>
-        ← Back
-      </button>
       <h1>Challenges</h1>
       <p>Content for challenges page coming soon...</p>
     </div>

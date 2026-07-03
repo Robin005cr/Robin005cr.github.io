@@ -9,23 +9,6 @@ const Certifications = () => {
   return (
     <div className={`${isDark ? 'bg-black text-white' : 'bg-white text-black'} font-sans leading-relaxed min-h-screen`}>
       <div className="max-w-5xl mx-auto p-6">
-        <div className="mb-6">
-          <button
-            onClick={() => navigate(-1)}
-            style={{
-              backgroundColor: '#0d9488',
-              color: 'white',
-              fontWeight: 600,
-              padding: '0.5rem 1rem',
-              borderRadius: '0.25rem',
-              border: 'none',
-              cursor: 'pointer',
-              marginBottom: '1.5rem'
-            }}
-          >
-            ← Back
-          </button>
-        </div>
 
         <header className="mb-10">
           <h1 className="text-4xl font-bold" style={{ color: '#0096FF' }}>Certifications</h1>

@@ -15,12 +15,12 @@ const Home = () => {
 
   const domains = [
     {
-      id: 'embedded',
-      icon: 'bx-chip',
-      title: 'Embedded Systems',
-      color: 'embedded',
-      description: 'Bare-metal firmware, sensor interfacing, and real-time communication protocols for resource-constrained hardware.',
-      skills: ['Bare-metal C/C++', 'I2C · SPI · UART', 'Sensor Encoders', 'RTOS'],
+      id: 'adas',
+      icon: 'bx-car',
+      title: 'ADAS & Autonomy',
+      color: 'adas',
+      description: 'Vision-based perception, LiDAR processing, and algorithm development for advanced driver assistance.',
+      skills: ['LiDAR Perception', 'Computer Vision', 'CANoe Testing', 'KPI Engineering'],
     },
     {
       id: 'robotics',
@@ -31,13 +31,15 @@ const Home = () => {
       skills: ['ROS / ROS2', 'Path Planning', 'Multi-threading', 'System Integration'],
     },
     {
-      id: 'adas',
-      icon: 'bx-car',
-      title: 'ADAS & Autonomy',
-      color: 'adas',
-      description: 'Vision-based perception, LiDAR processing, and algorithm development for advanced driver assistance.',
-      skills: ['LiDAR Perception', 'Computer Vision', 'CANoe Testing', 'KPI Engineering'],
+      id: 'embedded',
+      icon: 'bx-chip',
+      title: 'Embedded Systems',
+      color: 'embedded',
+      description: 'Bare-metal firmware, sensor interfacing, and real-time communication protocols for resource-constrained hardware.',
+      skills: ['Bare-metal C/C++', 'I2C · SPI · UART', 'Sensor Encoders', 'RTOS'],
     },
+
+
   ];
 
   const techStack = [
@@ -310,6 +312,10 @@ const Home = () => {
               </div>
             </div>
             <div className="stack__tools">
+              <div className="tool-card">
+                <h4><i className="bx bx-languages" /> Programming Languages</h4>
+                <p>C++ . Embedded C · Python . Ruby </p>
+              </div>
               <div className="tool-card">
                 <h4><i className="bx bx-bug" /> Debuggers</h4>
                 <p>Valgrind · GDB · Trace32</p>
