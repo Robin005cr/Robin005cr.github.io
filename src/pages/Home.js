@@ -43,7 +43,7 @@ const Home = () => {
   ];
 
   const techStack = [
-    'C', 'C++', 'Python', 'Linux', 'ROS', 'docker', 'Git', 'Multi-threading', 'Design Patterns', 'Perception',
+    'Linux', 'ROS', 'docker', 'Git', 'Multi-threading', 'Design Patterns', 'Perception',
   ];
 
   const projects = [
