@@ -43,7 +43,7 @@ const Home = () => {
   ];
 
   const techStack = [
-    'Linux', 'ROS', 'docker', 'Git', 'Multi-threading', 'Design Patterns', 'Perception',
+    'Linux', 'ROS', 'Multi-threading', 'Design Patterns', 'Perception', 'Path Planning',
   ];
 
   const projects = [
@@ -82,8 +82,8 @@ const Home = () => {
     {
       title: 'Calendar and Clock',
       url: 'https://github.com/Robin005cr/Calendar-and-Clock',
-      tags: ['C++', 'STL'],
-      category: 'embedded',
+      tags: ['C++', 'STL', 'Unit testing'],
+      category: 'Application',
       description: 'Time-logic problem solver built with C++ standard library primitives.',
       image: '/assets/img/CalendarClock.jpg',
     },
@@ -91,7 +91,7 @@ const Home = () => {
       title: 'Question Paper Set Creator',
       url: 'https://github.com/Robin005cr/Question_Paper_Set_Creator',
       tags: ['C++', 'File Handling'],
-      category: 'embedded',
+      category: 'Application',
       description: 'Automated generation of randomized question papers from a structured question bank.',
       image: '/assets/img/questionPaper.jpg',
     },
@@ -159,10 +159,6 @@ const Home = () => {
               <span id="typewriter">{typewriterText}</span>
               <span className="hero__cursor">|</span>
             </p>
-            <p className="hero__tagline">
-              Building firmware, autonomous systems, and perception pipelines
-              at the intersection of hardware and intelligent software.
-            </p>
             <div className="hero__actions">
               <a href="#project" className="button button--primary" onClick={scrollToProjects}>
                 View Projects
@@ -202,34 +198,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* DOMAINS */}
-      <section className="domains section" id="domains">
-        <div className="bd-grid">
-          <span className="section-label section-label--center">Core Domains</span>
-          <h2 className="section-title">Where I Build</h2>
-          <p className="section-subtitle">
-            Three engineering disciplines that define my work — from silicon to software-defined vehicles.
-          </p>
-          <div className="domains__grid">
-            {domains.map((domain) => (
-              <article key={domain.id} className={`domain-card domain-card--${domain.color}`}>
-                <div className="domain-card__icon">
-                  <i className={`bx ${domain.icon}`} />
-                </div>
-                <h3 className="domain-card__title">{domain.title}</h3>
-                <p className="domain-card__desc">{domain.description}</p>
-                <ul className="domain-card__skills">
-                  {domain.skills.map(skill => (
-                    <li key={skill}>{skill}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT */}
       <section className="about section" id="about">
         <div className="bd-grid about__grid">
           <div className="about__content">
@@ -296,6 +264,33 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="domains section" id="domains">
+        <div className="bd-grid">
+          <span className="section-label section-label--center">Core Domains</span>
+          <h2 className="section-title">Where I Build</h2>
+          <p className="section-subtitle">
+            Three engineering disciplines that define my work — from silicon to software-defined vehicles.
+          </p>
+          <div className="domains__grid">
+            {domains.map((domain) => (
+              <article key={domain.id} className={`domain-card domain-card--${domain.color}`}>
+                <div className="domain-card__icon">
+                  <i className={`bx ${domain.icon}`} />
+                </div>
+                <h3 className="domain-card__title">{domain.title}</h3>
+                <p className="domain-card__desc">{domain.description}</p>
+                <ul className="domain-card__skills">
+                  {domain.skills.map(skill => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
       {/* TECH STACK */}
       <section className="stack section" id="stack">
@@ -323,6 +318,10 @@ const Home = () => {
               <div className="tool-card">
                 <h4><i className="bx bx-test-tube" /> Testing</h4>
                 <p>CANoe · Logic Analyzers</p>
+              </div>
+              <div className="tool-card">
+                <h4><i className="bx bx-tools" /> Tools</h4>
+                <p>Git . Docker · Wireshark </p>
               </div>
             </div>
           </div>
@@ -391,8 +390,7 @@ const Home = () => {
           <span className="section-label section-label--center">Get in Touch</span>
           <h2 className="section-title">Let's Connect</h2>
           <p className="section-subtitle">
-            Interested in embedded, robotics, or ADAS work? Drop a message.
-          </p>
+            If you have a doubt,idea or opportunity. I am always available for a discussion.Let's build something together. </p>
           <form className="contact__form" onSubmit={handleFormSubmit}>
             <div className="contact__row">
               <input type="text" placeholder="Name" name="name" className="contact__input" required />
