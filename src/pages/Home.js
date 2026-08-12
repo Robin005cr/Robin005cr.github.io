@@ -192,7 +192,7 @@ const Home = () => {
             <div className="hero__ring hero__ring--2" aria-hidden="true" />
             <div className="hero__ring hero__ring--3" aria-hidden="true" />
             <div className="profile-frame">
-              <img src="/assets/img/robin.png" alt="Robin CR" className="profile-img" />
+              <img src="/assets/img/robin2.jpg" alt="Robin CR" className="profile-img" />
             </div>
           </div>
         </div>

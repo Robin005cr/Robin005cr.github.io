@@ -23,14 +23,13 @@ const Certifications = () => {
             <li>Working knowledge on resource utilization, shared memory, and schedulers.</li>
             <li>Proper understanding of Linux Fundamentals (System calls, Booting, file system) is gained.</li>
           </ul>
-          <a
-            href="/assets/certificates/ESP-STU-2021-00012_Robin.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition"
+          <button
+            type="button"
+            onClick={() => window.open('/assets/certificates/ESP-STU-2021-00012_Robin.pdf', '_blank', 'noopener,noreferrer')}
+            className="mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition"
           >
             View Certificate
-          </a>
+          </button>
         </section>
 
         <section className="mb-10">
@@ -42,14 +41,6 @@ const Certifications = () => {
             <li>Covered Design Patterns explaining their roles in code reusability and scalability.</li>
             <li>Clean coding guidelines and common practices were addressed.</li>
           </ul>
-          <a
-            href="/assets/certificates/ESP-STU-2021-00012_Robin.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition"
-          >
-            View Certificate
-          </a>
         </section>
         <section className="mb-10">
           <h2 className="text-2xl font-semibold" style={{ color: '#0096FF' }}>Anthropic Agentic AI</h2>
@@ -60,18 +51,14 @@ const Certifications = () => {
             <li>AI Fluency</li>
             <li>Customs prompts and Agents</li>
           </ul>
-          <a
-            href="assets/certificates/ESP-STU-2021-00012_Robin.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition"
+          <button
+            type="button"
+            onClick={() => window.open('assets/certificates/Anthropic_claude_101.pdf', '_blank', 'noopener,noreferrer')}
+            className="mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition"
           >
             View Certificate
-          </a>
+          </button>
         </section>
-        <footer className="mt-10 text-center text-gray-500 text-sm">
-          <p>© 2025. Embedded Developer Portfolio.</p>
-        </footer>
       </div>
     </div>
   );
