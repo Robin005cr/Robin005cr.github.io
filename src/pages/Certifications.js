@@ -26,7 +26,7 @@ const Certifications = () => {
           <button
             type="button"
             onClick={() => window.open('/assets/certificates/ESP-STU-2021-00012_Robin.pdf', '_blank', 'noopener,noreferrer')}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition"
+            className="button button--primary mt-4"
           >
             View Certificate
           </button>
@@ -53,8 +53,8 @@ const Certifications = () => {
           </ul>
           <button
             type="button"
-            onClick={() => window.open('assets/certificates/Anthropic_claude_101.pdf', '_blank', 'noopener,noreferrer')}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition"
+            onClick={() => window.open('/assets/certificates/Anthropic_claude_101.pdf', '_blank', 'noopener,noreferrer')}
+            className="button button--primary mt-4"
           >
             View Certificate
           </button>

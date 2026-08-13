@@ -164,7 +164,7 @@ const Home = () => {
                 View Projects
               </a>
               <a
-                href="/assets/CV/RobinCR_Software_Developer.pdf"
+                href="/assets/CV/RobinCR_Software_Developer1.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button button--outline"
@@ -222,14 +222,6 @@ const Home = () => {
                 <span className="stat__value">6+</span>
                 <span className="stat__label">Projects</span>
               </div>
-            </div>
-            <div className="cv-buttons">
-              <a href="/assets/CV/RobinCR_Software_Developer.pdf" target="_blank" rel="noopener noreferrer" className="button button--primary">
-                View CV
-              </a>
-              <a href="/assets/CV/RobinCR_Software_Developer.docx" download className="button button--outline">
-                Download CV
-              </a>
             </div>
           </div>
           <div className="about__roles">
