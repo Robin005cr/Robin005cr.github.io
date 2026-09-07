@@ -5,8 +5,6 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Bugs from './pages/Bugs';
 import ProfessionalExperience from './pages/ProfessionalExperience';
-import Challenges from './pages/Challenges';
-import Shortcuts from './pages/Shortcuts';
 import Certifications from './pages/Certifications';
 import './App.css';
 
@@ -20,8 +18,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/bugs" element={<Bugs />} />
             <Route path="/prof_exp" element={<ProfessionalExperience />} />
-            <Route path="/challenges" element={<Challenges />} />
-            <Route path="/shortcuts" element={<Shortcuts />} />
             <Route path="/certifications" element={<Certifications />} />
           </Routes>
         </main>

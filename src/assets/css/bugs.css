@@ -63,7 +63,6 @@ pre {
   content: '📋';
 }
 
-/* Dark theme (default) overrides */
 body:not(.light-theme) .bugs-page {
   background: var(--color-bg);
   color: var(--color-text);

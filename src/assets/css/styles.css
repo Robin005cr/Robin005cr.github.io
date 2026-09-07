@@ -1,4 +1,3 @@
-/* ===== DESIGN TOKENS ===== */
 :root {
   --header-height: 4rem;
   --font-display: "Space Grotesk", sans-serif;
@@ -52,7 +51,6 @@ body.light-theme {
   --shadow-md: 0 8px 32px rgba(15, 23, 42, 0.1);
 }
 
-/* ===== RESET & BASE ===== */
 *,
 ::before,
 ::after {
@@ -90,7 +88,6 @@ img {
   display: block;
 }
 
-/* ===== LAYOUT ===== */
 .bd-grid {
   max-width: var(--container-max);
   margin-left: auto;
@@ -135,7 +132,6 @@ img {
   margin-bottom: 0.75rem;
 }
 
-/* ===== HEADER ===== */
 .l-header {
   position: fixed;
   top: 0;
@@ -296,7 +292,6 @@ body.light-theme .l-header {
   }
 }
 
-/* ===== BUTTONS ===== */
 .button {
   display: inline-flex;
   align-items: center;
@@ -355,7 +350,6 @@ body.light-theme .l-header {
   background: #196c2e;
 }
 
-/* ===== FOOTER ===== */
 .footer {
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
@@ -416,7 +410,6 @@ body.light-theme .l-header {
   color: var(--color-text-dim);
 }
 
-/* ===== SUB-PAGE COMPAT ===== */
 .page-container {
   max-width: var(--container-max);
   margin: 0 auto;

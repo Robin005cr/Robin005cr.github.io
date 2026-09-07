@@ -58,13 +58,11 @@ const ProfessionalExperience = () => {
       </div>
 
       <div className="max-w-5xl mx-auto p-6">
-        {/* ARi Job */}
         <header className="mb-10">
           <h1 id="job-ari" className="text-4xl font-bold text-teal-400">Autonomy Software Engineer – ARi</h1>
           <h3 id="job-ari" className="text-black">Client : Caterpillar</h3>
           <p className="text-black">January 2025 – Present</p>
         </header>
-         {/* Surface Haul Image */}
         <div className="flex justify-center mb-10">
           <img src="/assets/img/haulTrek.jpg" alt="Surface Hauling: Lidar Perception" style={{ maxWidth: '400px', width: '100%', borderRadius: '8px' }} />
         </div>
@@ -88,7 +86,6 @@ const ProfessionalExperience = () => {
           </ul>
         </section>
 
-        {/* Bosch Job */}
         <header className="mb-10">
           <h1 id="job-bosch" className="text-4xl font-bold text-teal-400">Embedded Developer – Bosch</h1>
           <p className="text-black">October 2022 – December 2024</p>
@@ -104,7 +101,6 @@ const ProfessionalExperience = () => {
             Alerts via haptics, acoustics, or infotainment display.</p>
         </section>
 
-        {/* IMS Project Image */}
         <div className="flex justify-center mb-10">
           <img src="/assets/img/dms.png" alt="Interior Monitoring System" style={{ maxWidth: '400px', width: '100%', borderRadius: '8px' }} />
         </div>
@@ -144,7 +140,6 @@ const ProfessionalExperience = () => {
           <p className="mb-4">DIC is a digital display that will show the necessary measurements like speed,fuel-level,time,indications to the driver.</p>
         </section>
 
-        {/* Digital Instrument Cluster Image */}
         <div className="flex justify-center mb-10">
           <img src="/assets/img/cluster.jpg" alt="Digital Instrument Cluster" style={{ maxWidth: '400px', width: '100%', borderRadius: '8px' }} />
         </div>
@@ -174,7 +169,6 @@ const ProfessionalExperience = () => {
           </ul>
         </section>
 
-        {/* Gadgeon Job */}
         <header className="mb-10">
           <h1 id="job-gadgeon" className="text-4xl font-bold text-teal-400">Software Developer – Gadgeon Smart Systems</h1>
           <p className="text-black">July 2021 – September 2022</p>

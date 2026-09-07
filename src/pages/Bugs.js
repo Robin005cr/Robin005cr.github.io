@@ -6,11 +6,9 @@ const Bugs = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Load highlight.js
     const script = document.createElement('script');
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js';
     script.onload = () => {
-      // Load C++ language support
       const cppScript = document.createElement('script');
       cppScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js';
       cppScript.onload = () => {
@@ -22,14 +20,12 @@ const Bugs = () => {
     };
     document.head.appendChild(script);
 
-    // Add highlight.js CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/solarized-dark.min.css';
     document.head.appendChild(link);
 
     return () => {
-      // Cleanup
       if (window.hljs) {
         window.hljs.highlightAll();
       }

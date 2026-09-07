@@ -1,9 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
 
 const Certifications = () => {
-  const navigate = useNavigate();
   const { isDark } = useTheme();
 
   return (

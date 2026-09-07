@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTypewriter } from '../hooks/useTypewriter';
 import './Home.css';
@@ -100,9 +100,7 @@ const Home = () => {
   const exploreLinks = [
     { to: '/prof_exp', label: 'Professional Experience', icon: 'bx-briefcase' },
     { to: '/certifications', label: 'Certifications', icon: 'bx-certification' },
-    { to: '/challenges', label: 'Challenges', icon: 'bx-trophy' },
     { to: '/bugs', label: 'Bugs & Fixes', icon: 'bx-bug' },
-    { to: '/shortcuts', label: 'Shortcuts', icon: 'bx-terminal' },
   ];
 
   const quotes = [
@@ -112,7 +110,7 @@ const Home = () => {
     'It\'s not about how many times you fail — it\'s about how many times you choose to rise.',
   ];
 
-  const [currentQuoteIndex, setCurrentQuoteIndex] = React.useState(0);
+  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -120,17 +118,6 @@ const Home = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [quotes.length]);
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!re.test(email)) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-    alert('Message received! Connect your backend to enable delivery.');
-  };
 
   const scrollToProjects = (e) => {
     e.preventDefault();
@@ -142,7 +129,6 @@ const Home = () => {
 
   return (
     <div className="portfolio">
-      {/* HERO */}
       <section className="hero" id="home">
         <div className="hero__grid-bg" aria-hidden="true" />
         <div className="hero__inner bd-grid">
@@ -282,9 +268,6 @@ const Home = () => {
         </div>
       </section>
 
-
-
-      {/* TECH STACK */}
       <section className="stack section" id="stack">
         <div className="bd-grid">
           <span className="section-label section-label--center">Toolkit</span>
@@ -320,7 +303,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* PROJECTS */}
       <section className="projects section" id="project">
         <div className="bd-grid">
           <span className="section-label section-label--center">Portfolio</span>
@@ -359,7 +341,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* EXPLORE */}
       <section className="explore section" id="skills">
         <div className="bd-grid">
           <span className="section-label section-label--center">Explore</span>
@@ -376,33 +357,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CONTACT */}
       <section className="contact section" id="contact">
         <div className="bd-grid">
           <span className="section-label section-label--center">Get in Touch</span>
           <h2 className="section-title">Let's Connect</h2>
           <p className="section-subtitle">
             If you have a doubt,idea or opportunity. I am always available for a discussion.Let's build something together. </p>
-          <form className="contact__form" onSubmit={handleFormSubmit}>
-            <div className="contact__row">
-              <input type="text" placeholder="Name" name="name" className="contact__input" required />
-              <input type="email" placeholder="Email" name="email" className="contact__input" required />
-            </div>
-            <textarea
-              name="message"
-              placeholder="Your message..."
-              rows="5"
-              className="contact__input contact__textarea"
-              required
-            />
-            <button type="submit" className="button button--primary contact__button">
-              Send Message
-            </button>
-          </form>
         </div>
       </section>
 
-      {/* QUOTE */}
       <section className="quote-section section" id="quotes">
         <div className="bd-grid">
           <blockquote className="quote-block" key={currentQuoteIndex}>
